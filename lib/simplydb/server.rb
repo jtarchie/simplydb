@@ -41,7 +41,9 @@ module SimplyDB
     end
 
     get '/domains/:name/items' do |name|
-      interface.select("select * from #{name}").each_value{|v| v.delete("Sdb-item-identifier")}.to_json
+      interface.select("select * from #{name}").each do |element|
+        element.each_value{|v| v.delete("Sdb-item-identifier")}
+      end.to_json
     end
 
     private

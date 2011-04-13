@@ -110,9 +110,9 @@ module SimplyDB
       }
       params['NextToken'] = next_token unless next_token.nil?
       call(params) do |doc|
-        doc.css("SelectResponse SelectResult Item").inject({}) do |items, item|
-          item_name = item.css("Name").first.text
-          items[item_name] = item.css("Attribute").inject({}) do |attributes, attribute|
+        doc.css("SelectResponse SelectResult Item").collect do |element|
+          item_name = element.css("Name").first.text
+          item = element.css("Attribute").inject({}) do |attributes, attribute|
             attribute_name = attribute.css("Name").first.text
             attribute_value = attribute.css("Value").first.text
             if attributes.has_key?(attribute_name)
@@ -123,7 +123,7 @@ module SimplyDB
             end
             attributes
           end
-          items
+          {item_name => item}
         end
       end
     end

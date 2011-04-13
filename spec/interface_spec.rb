@@ -44,10 +44,6 @@ describe SimplyDB::Interface do
       }
     end
   end
-
-  def set_response_body(body)
-    
-  end
   
   describe "successful API calls" do
     it "should set stats for a request" do
@@ -131,34 +127,33 @@ describe SimplyDB::Interface do
         stub_request(:post, "https://sdb.amazonaws.com/").
         with(:body => 'Action=Select&Signature=o%2BGcUfU%2BGkNpiAuibSfNnMyYQ2zENrqqCtRcDRW9cZo%3D&Version=2009-04-15&AWSAccessKeyId=12345&SignatureVersion=2&Timestamp=2011-04-11T23%3A09%3A00-07%3A00&SignatureMethod=HmacSHA256&SelectExpression=select%20Color%20from%20MyDomain%20where%20Color%20like%20\'Blue%25\'&ConsistentRead=false').
         to_return(:status => 200, :body => '<SelectResponse><SelectResult><Item><Name>Item_03</Name><Attribute><Name>Category</Name><Value>Clothes</Value></Attribute><Attribute><Name>Subcategory</Name><Value>Pants</Value></Attribute><Attribute><Name>Name</Name><Value>Sweatpants</Value></Attribute><Attribute><Name>Color</Name><Value>Blue</Value></Attribute><Attribute><Name>Color</Name><Value>Yellow</Value></Attribute><Attribute><Name>Color</Name><Value>Pink</Value></Attribute><Attribute><Name>Size</Name><Value>Large</Value></Attribute></Item><Item><Name>Item_06</Name><Attribute><Name>Category</Name><Value>Motorcycle Parts</Value></Attribute><Attribute><Name>Subcategory</Name><Value>Bodywork</Value></Attribute><Attribute><Name>Name</Name><Value>Fender Eliminator</Value></Attribute><Attribute><Name>Color</Name><Value>Blue</Value></Attribute><Attribute><Name>Make</Name><Value>Yamaha</Value></Attribute><Attribute><Name>Model</Name><Value>R1</Value></Attribute></Item></SelectResult><ResponseMetadata><RequestId>b1e8f1f7-42e9-494c-ad09-2674e557526d</RequestId><BoxUsage>0.0000219907</BoxUsage></ResponseMetadata></SelectResponse>')
-        @interface.select("select Color from MyDomain where Color like 'Blue%'") do |items|
-          items.should == {
-            'Item_03' => {
-              'Category' => 'Clothes',
-              'Subcategory' => 'Pants',
-              'Name' => 'Sweatpants',
-              'Color' => ['Blue','Yellow','Pink'],
-              'Size' => 'Large'
-            },
-            'Item_06' => {
-              'Category' => 'Motorcycle Parts',
-              'Subcategory' => 'Bodywork',
-              'Name' => 'Fender Eliminator',
-              'Color' => 'Blue',
-              'Make' => 'Yamaha',
-              'Model' => 'R1'
-            }
-          }
-        end
+        @interface.select("select Color from MyDomain where Color like 'Blue%'").should == [
+              {
+                'Item_03' => {
+                  'Category' => 'Clothes',
+                  'Subcategory' => 'Pants',
+                  'Name' => 'Sweatpants',
+                  'Color' => ['Blue','Yellow','Pink'],
+                  'Size' => 'Large'
+                }
+              },
+              {
+                'Item_06' => {
+                  'Category' => 'Motorcycle Parts',
+                  'Subcategory' => 'Bodywork',
+                  'Name' => 'Fender Eliminator',
+                  'Color' => 'Blue',
+                  'Make' => 'Yamaha',
+                  'Model' => 'R1'
+                }
+              }
+            ]
       end
 
       it "should delete attributes from an item" do
         stub_request(:post, "https://sdb.amazonaws.com/").
         with(:body => "Action=DeleteAttributes&Signature=y0TiZtiCw43FcSq6gS6WzhEIgBELLm9zzX7dlNYlQn4%3D&Version=2009-04-15&AWSAccessKeyId=12345&Attribute.2.Value=garnet&Attribute.0.Value=red&SignatureVersion=2&Timestamp=2011-04-11T23%3A09%3A00-07%3A00&Attribute.1.Value=brick&SignatureMethod=HmacSHA256&Attribute.2.Name=color&Attribute.1.Name=color&Attribute.0.Name=color&DomainName=MyDomain&ItemName=JumboFez").
         to_return(:status => 200, :body => '<DeleteAttributesResponse><ResponseMetadata><RequestId>05ae667c-cfac-41a8-ab37-a9c897c4c3ca</RequestId><BoxUsage>0.0000219907</BoxUsage></ResponseMetadata></DeleteAttributesResponse>')
-        @interface.delete_attributes('MyDomain', 'JumboFez', {'color'=>['red','brick','garnet']}) do |success|
-          success.should == true
-        end
         @interface.delete_attributes('MyDomain', 'JumboFez', {'color'=>['red','brick','garnet']}).should == true
       end
 
@@ -166,9 +161,6 @@ describe SimplyDB::Interface do
         stub_request(:post, "https://sdb.amazonaws.com/").
         with(:body => "Action=PutAttributes&Signature=mTCSIWRwZiOY%2BeXLMdp9962OCSwf6Z0slBzG2caFGBM%3D&Version=2009-04-15&AWSAccessKeyId=12345&Attribute.2.Value=garnet&Attribute.0.Value=red&SignatureVersion=2&Timestamp=2011-04-11T23%3A09%3A00-07%3A00&Attribute.1.Value=brick&SignatureMethod=HmacSHA256&Attribute.2.Name=color&Attribute.1.Name=color&Attribute.0.Name=color&DomainName=MyDomain&ItemName=Item123").
         to_return(:status => 200, :body => '<PutAttributesResponse><ResponseMetadata><RequestId>490206ce-8292-456c-a00f-61b335eb202b</RequestId><BoxUsage>0.0000219907</BoxUsage></ResponseMetadata></PutAttributesResponse>')
-        @interface.put_attributes('MyDomain', 'Item123', {'color'=>['red','brick','garnet']}) do |success|
-          success.should == true
-        end
         @interface.put_attributes('MyDomain', 'Item123', {'color'=>['red','brick','garnet']}).should == true
       end
     end
