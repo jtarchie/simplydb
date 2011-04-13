@@ -1,0 +1,119 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://sdb.amazonaws.com:443/
+    body: Action=CreateDomain&Signature=dIeUQBpWsieilErb6SsxEAxd7ni9nmsQNVbzYDZQjf4%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=information
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "242"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      server: 
+      - Amazon SimpleDB
+      date: 
+      - Wed, 13 Apr 2011 03:03:11 GMT
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAG2PvQ6CMBRGd5/CsJdekBYxpSbq4uBi4gNc6EVJpEVbf+LT
+      K4OaGNeT8+XkU/N7dxxf6exbZ8soiSGa65FangkDrVyHrd2S7531NH6Z1pfR
+      IYR+xrk3VYwdPpzFm49r13Hjap4CFAwylggeafWebiigwYADOV3Ih7XRUmCN
+      CMSyIs8YyMwwSUXDJpA0FSQoJeSKf321cPedxz1piAGEEAWk+VTxDx7k3xz/
+      d0Q/AcW/hwj1AAAA
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://sdb.amazonaws.com:443/
+    body: Action=ListDomains&Signature=DegXo6Vb5uZea%2F5Hj3nYBhdNZY2wHche7hahJ6AaHJE%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "220"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      server: 
+      - Amazon SimpleDB
+      date: 
+      - Wed, 13 Apr 2011 03:03:11 GMT
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAIWRwU7DMAyG7zzF1HuatEkXirJMQlyQgAMSD+AlKURqkrJ4
+      Y/D0tELAVI3hm39/sn/ban0I/WLvttmnuCqqkhVrfaHufMabFMDH/OjykGJ2
+      ixGMeVW8IA5XlGa7KSHAR4rwlkuTArXJ0JqxljBBqoYWetZl16NWX+kDBKfB
+      oN97fFf0SDwGfOzSNgCOzv5k+mTOAzGh7/w/0DDuPy/TE+6/b3HvECwgTMrr
+      zmW8tZrbTiwZr8f1RUfM5pIREFyQpq0lcMnbpZWK/vLqOh2eMjw7zUo2haxk
+      0yr6I0/wfBw98Rj9CVA5ZG/EAQAA
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://sdb.amazonaws.com:443/
+    body: Action=DeleteDomain&Signature=gD5VnHwAvWvbWnfROL6497Jp1rNs%2BALtXLFNia9nbnw%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=information
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "244"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      server: 
+      - Amazon SimpleDB
+      date: 
+      - Wed, 13 Apr 2011 03:03:13 GMT
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAG2PvQrCMBRGd59Cuqe5jQ21EiOIi4OL4ANckxstNIma+INP
+      rw4qiOvhfBw+Nbv5fnihU+pimBZVCcVMD9SCesq0iB67sKZ0iCHR8GmGNC32
+      OR8mnCe7LdHjPQa8ptJEz200XAC0DGpWSV5o9Z6uKKPFjC9yPFPKS6tb45rG
+      GcvsVgpWmwoZ2rFgVNcwck60DlDxr6/m8bZJuCMNJYCUsgXRjBX/4Jf8m+P/
+      jugH6eOgcvUAAAA=
+
+    http_version: "1.1"

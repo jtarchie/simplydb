@@ -1,0 +1,81 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://sdb.amazonaws.com:443/
+    body: Action=DeleteAttributes&Signature=73N0%2BRCYbWF8pdt9gBFLjW%2FtQV4B9BSIt8QjK9%2FL6ts%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&Attribute.0.Value=27&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&Attribute.1.Value=90210&SignatureMethod=HmacSHA256&Attribute.1.Name=zip&Attribute.0.Name=age&DomainName=activity&ItemName=delete_partialID
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "362"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      date: 
+      - Wed, 13 Apr 2011 03:03:25 GMT
+      server: 
+      - Amazon SimpleDB
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAHWPzQrCMBCE7z5F6T3NJm2VSowoXjx4EXyApFl/wDbqbrX4
+      9OpBBcE5fnzDMGbaN8fkihc6xHaSqgzSqR2YBR6RccZ8OfiOkdZIp9gSJk+7
+      pUm6Zz6NpaTgM9e4e2zdjbI6NjLEWmqASkAhVClTa97VFbILjt2LnDskXgar
+      cORLHCpRhtwLAF8Lr2svChV0PsKtg1AZ+fXNPPYbcju0kMEzWlWVzo384Jf8
+      Oyf/nbEPjvjOuv0AAAA=
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://sdb.amazonaws.com:443/
+    body: Action=GetAttributes&Signature=5CKPRn%2FTJbzXhGDbhgCkSnP2lCkIFs782%2FplLdtzHrU%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ConsistentRead=false&ItemName=delete_partialID
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "291"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      server: 
+      - Amazon SimpleDB
+      date: 
+      - Wed, 13 Apr 2011 03:03:31 GMT
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAI2QT0/DMAzF73yKqvc2adYwhrJMAwkE0jgwwd1tPFZpTUbt
+      wuDT0w1tsD+H+RDJL+/9bNmMVvUi+sCGquCHcZbKeGQvzD3ymLmpipaRnpGW
+      wRNGndXTMJ4zL6+FIFekUMN38PBJaRlq4UIplJSDROZJpkVsjzjtgq3ZKdY8
+      QY0WnGuQyIhNZ15h0aLNVC+aQOWjKRvxKxnxL3kI8d2zT3gM8y5dVzw/C0AM
+      fEC4HZ+VLCv+2g9OwUd3DfiyojKcZIiTl9leeoIMDhjWynuLxA/Ooizyfj7Q
+      idazPFHu6jLRSpcJzGZ9WWABWnXr//nNTVi9ELyhlalc16CnlTJiJ6/Nh+OO
+      1tr82x9aZV5mJgIAAA==
+
+    http_version: "1.1"
