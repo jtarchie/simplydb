@@ -3,6 +3,9 @@ require "json"
 
 module SimplyDB
   class Server < Sinatra::Base
+    before do
+      content_type :json
+    end
     get '/domains' do
       interface.list_domains.sort.to_json
     end

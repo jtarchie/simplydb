@@ -48,6 +48,16 @@ describe SimplyDB::Server do
       :access_key => ENV['AWS_ACCESS_KEY']
     )
   end
+  
+  shared_examples_for "successful JSON response" do
+    it "returns successful" do
+      last_response.status.should == 200
+    end
+
+    it "sets the content type for JSON" do
+      last_response.content_type.should == "application/json"
+    end
+  end
 
   describe "domain operations" do
 
@@ -58,10 +68,8 @@ describe SimplyDB::Server do
         get '/domains'
       end
 
-      it "returns successful" do
-        last_response.status.should == 200
-      end
-
+      it_behaves_like "successful JSON response"
+      
       it "returns list of domains" do
         JSON.parse(last_response.body).should == ["activity", "location", "notification", "person"]
       end
@@ -78,9 +86,7 @@ describe SimplyDB::Server do
         interface.delete_domain("information")
       end
 
-      it "returns successful when creating a new domain" do
-        last_response.status.should == 200
-      end
+      it_behaves_like "successful JSON response"
 
       it "returns a list of current domains" do
         JSON.parse(last_response.body).should == ["activity", "information", "location", "notification", "person"]
@@ -95,9 +101,7 @@ describe SimplyDB::Server do
         delete '/domains', {:name => 'information'}
       end
 
-      it "returns successful that domain was deleted" do
-        last_response.status.should == 200
-      end
+      it_behaves_like "successful JSON response"
 
       it "returns a list of current domains" do
         JSON.parse(last_response.body).should == ["activity", "location", "notification", "person"]
@@ -111,9 +115,7 @@ describe SimplyDB::Server do
         get '/domains/activity'
       end
 
-      it "returns successful" do
-        last_response.status.should == 200
-      end
+      it_behaves_like "successful JSON response"
 
       it "returns the meta data" do
         attributes = JSON.parse(last_response.body)
@@ -131,9 +133,7 @@ describe SimplyDB::Server do
         get '/domains/activity/items/testID'
       end
 
-      it "returns successful" do
-        last_response.status.should == 200
-      end
+      it_behaves_like "successful JSON response"
 
       it "returns list of the current attributes" do
         JSON.parse(last_response.body).should == {"zip"=>"90210", "address"=>"123 Main St", "age"=>"27", "name"=>"John Smith", "state"=>"CA", "city"=>"San Francisco"}
@@ -147,9 +147,7 @@ describe SimplyDB::Server do
         put '/domains/activity/items/updateID', "item" => {"zip" => "12345", "age" => "28"}
       end
 
-      it "returns successful" do
-        last_response.status.should == 200
-      end
+      it_behaves_like "successful JSON response"
 
       it "returns an empty response" do
         last_response.body.should == ""
@@ -166,9 +164,7 @@ describe SimplyDB::Server do
         get '/domains/activity/items'
       end
       
-      it "returns successful" do
-        last_response.status.should == 200
-      end
+      it_behaves_like "successful JSON response"
 
       it "returns a hash of item id to attributes" do
         JSON.parse(last_response.body).should == {"testID"=>{"zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}, "updateID"=>{"zip"=>"12345", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"28", "state"=>"CA", "city"=>"San Francisco"}, "delete_partialID"=>{"zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}, "delete_allID"=>{"zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}}
@@ -183,9 +179,7 @@ describe SimplyDB::Server do
           delete '/domains/activity/items/delete_partialID', "item" => {"zip" => "90210", "age" => "27"}
         end
 
-        it "returns successful" do
-          last_response.status.should == 200
-        end
+        it_behaves_like "successful JSON response"
 
         it "returns an empty response" do
           last_response.body.should == ""
@@ -203,9 +197,7 @@ describe SimplyDB::Server do
           delete '/domains/activity/items/delete_allID'
         end
 
-        it "returns successful" do
-          last_response.status.should == 200
-        end
+        it_behaves_like "successful JSON response"
 
         it "returns an empty response" do
           last_response.body.should == ""
