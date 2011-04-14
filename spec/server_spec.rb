@@ -1,6 +1,10 @@
 require File.dirname(__FILE__) + '/spec_helper'
 require "json"
 
+SimplyDB::Server.get('/raise_error') do
+  raise SimplyDB::AccessFailure, "With explaination of why..."
+end
+
 describe SimplyDB::Server do
   include Rack::Test::Methods
 
@@ -28,7 +32,7 @@ describe SimplyDB::Server do
   after(:all) do
     Timecop.freeze Time.local(2011, 4, 13, 1, 40)
     VCR.use_cassette("destroy_env", :record => :none) do
-      interface.list_domains.each do |domain|
+      default_domains.each do |domain|
         interface.delete_domain(domain)
       end
     end
@@ -36,16 +40,16 @@ describe SimplyDB::Server do
   end
 
   def app
-    SimplyDB::Server.set :aws_secret_key, ENV['AWS_SECRET_KEY']
-    SimplyDB::Server.set :aws_access_key, ENV['AWS_ACCESS_KEY']
+    SimplyDB::Server.set :aws_secret_key, ENV['AWS_SECRET_KEY'] || 'thhyyt9ZU3bo0Q/ZOt9C0dD8MZzJS8AUvrE9/B82'
+    SimplyDB::Server.set :aws_access_key, ENV['AWS_ACCESS_KEY'] || '1VRWH6Y8EA9RKV7NHSR2'
     SimplyDB::Server.set :environment, :test
     SimplyDB::Server
   end
 
   def interface
     SimplyDB::Interface.new(
-      :secret_key => ENV['AWS_SECRET_KEY'],
-      :access_key => ENV['AWS_ACCESS_KEY']
+      :secret_key => ENV['AWS_SECRET_KEY'] || 'thhyyt9ZU3bo0Q/ZOt9C0dD8MZzJS8AUvrE9/B82',
+      :access_key => ENV['AWS_ACCESS_KEY'] || '1VRWH6Y8EA9RKV7NHSR2'
     )
   end
   
@@ -211,6 +215,21 @@ describe SimplyDB::Server do
         it "updates the attributes" do
           interface.get_attributes("activity", "delete_allID").should == {}
         end
+      end
+    end
+    
+    describe "when handling errors from SimplyDB::Error" do
+      before do
+        get '/raise_error'
+      end
+      
+      it "should proxy the HTTP error code associated with the SimplyDB::Error" do
+        last_response.status.should == SimplyDB::AccessFailure.http_status_code
+      end
+      
+      it "should set a header with the supplied error message" do
+        last_response.headers['AMZ-ERROR-TYPE'].should == "AccessFailure"
+        last_response.headers['AMZ-ERROR-MESSAGE'].should == "With explaination of why..."
       end
     end
   end

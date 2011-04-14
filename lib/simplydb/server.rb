@@ -45,6 +45,22 @@ module SimplyDB
         element.each_value{|v| v.delete("Sdb-item-identifier")}
       end.to_json
     end
+    
+    error SimplyDB::Error do
+      [
+        env['sinatra.error'].http_status_code.to_i,
+        {
+          'AMZ-ERROR-TYPE' => env['sinatra.error'].name,
+          'AMZ-ERROR-MESSAGE' => env['sinatra.error'].message
+        },
+        {
+          'error' => {
+            'type' => env['sinatra.error'].name,
+            'message' => env['sinatra.error'].message
+          }
+        }.to_json
+      ]
+    end
 
     private
 

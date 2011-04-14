@@ -1,60 +1,65 @@
 module SimplyDB
-  module Error
-    # ref http://docs.amazonwebservices.com/AmazonSimpleDB/latest/DeveloperGuide/APIError.html
-    class AccessFailure < RuntimeError; end
-    class AttributeDoesNotExist < RuntimeError; end
-    class AuthFailure < RuntimeError; end
-    class AuthMissingFailure < RuntimeError; end
-    class ConditionalCheckFailed < RuntimeError; end
-    class ExistsAndExpectedValue < RuntimeError; end
-    class FeatureDeprecated < RuntimeError; end
-    class IncompleteExpectedExpression < RuntimeError; end
-    class InternalError < RuntimeError; end
-    class InvalidAction < RuntimeError; end
-    class InvalidHTTPAuthHeader < RuntimeError; end
-    class InvalidHttpRequest < RuntimeError; end
-    class InvalidLiteral < RuntimeError; end
-    class InvalidNextToken < RuntimeError; end
-    class InvalidNumberPredicates < RuntimeError; end
-    class InvalidNumberValueTests < RuntimeError; end
-    class InvalidParameterCombination < RuntimeError; end
-    class InvalidParameterValue < RuntimeError; end
-    class InvalidQueryExpression < RuntimeError; end
-    class InvalidResponseGroups < RuntimeError; end
-    class InvalidService < RuntimeError; end
-    class InvalidSOAPRequest < RuntimeError; end
-    class InvalidSortExpression < RuntimeError; end
-    class InvalidURI < RuntimeError; end
-    class InvalidWSAddressingProperty < RuntimeError; end
-    class InvalidWSDLVersion < RuntimeError; end
-    class MalformedSOAPSignature < RuntimeError; end
-    class MissingAction < RuntimeError; end
-    class MissingParameter < RuntimeError; end
-    class MissingWSAddressingProperty < RuntimeError; end
-    class MultipleExistsConditions < RuntimeError; end
-    class MultipleExpectedNames < RuntimeError; end
-    class MultipleExpectedValues < RuntimeError; end
-    class MultiValuedAttribute < RuntimeError; end
-    class NoSuchDomain < RuntimeError; end
-    class NoSuchVersion < RuntimeError; end
-    class NotYetImplemented < RuntimeError; end
-    class NumberDomainsExceeded < RuntimeError; end
-    class NumberDomainAttributesExceeded < RuntimeError; end
-    class NumberDomainBytesExceeded < RuntimeError; end
-    class NumberItemAttributesExceeded < RuntimeError; end
-    class NumberSubmittedAttributesExceeded < RuntimeError; end
-    class NumberSubmittedItemsExceeded < RuntimeError; end
-    class RequestExpired < RuntimeError; end
-    class RequestTimeout < RuntimeError; end
-    class ServiceUnavailable < RuntimeError; end
-    class TooManyRequestedAttributes < RuntimeError; end
-    class UnsupportedHttpVerb < RuntimeError; end
-    class UnsupportedNextToken < RuntimeError; end
-    class URITooLong < RuntimeError; end
-
-    #Standard AWS errors
-    class SignatureDoesNotMatch < RuntimeError; end
-    class InvalidClientTokenId < RuntimeError; end
-    class InvalidRequest < RuntimeError; end
+  class Error < RuntimeError
+    attr_accessor :http_status_code, :name
+    def initialize(name, http_status_code)
+      @name = name
+      @http_status_code = http_status_code
+    end  
   end
+  
+  AccessFailure = Error.new("AccessFailure",403)
+  AttributeDoesNotExist = Error.new("AttributeDoesNotExist",404)
+  AuthFailure = Error.new("AuthFailure",403)
+  AuthMissingFailure = Error.new("AuthMissingFailure",403)
+  ConditionalCheckFailed = Error.new("ConditionalCheckFailed",409)
+  ExistsAndExpectedValue = Error.new("ExistsAndExpectedValue",400)
+  FeatureDeprecated = Error.new("FeatureDeprecated",400)
+  IncompleteExpectedExpression = Error.new("IncompleteExpectedExpression",400)
+  InternalError = Error.new("InternalError",500)
+  InvalidAction = Error.new("InvalidAction",400)
+  InvalidHTTPAuthHeader = Error.new("InvalidHTTPAuthHeader",400)
+  InvalidHttpRequest = Error.new("InvalidHttpRequest",400)
+  InvalidLiteral = Error.new("InvalidLiteral",400)
+  InvalidNextToken = Error.new("InvalidNextToken",400)
+  InvalidNumberPredicates = Error.new("InvalidNumberPredicates",400)
+  InvalidNumberValueTests = Error.new("InvalidNumberValueTests",400)
+  InvalidParameterCombination = Error.new("InvalidParameterCombination",400)
+  InvalidParameterValue = Error.new("InvalidParameterValue",400)
+  InvalidQueryExpression = Error.new("InvalidQueryExpression",400)
+  InvalidResponseGroups = Error.new("InvalidResponseGroups",400)
+  InvalidService = Error.new("InvalidService",400)
+  InvalidSOAPRequest = Error.new("InvalidSOAPRequest",400)
+  InvalidSortExpression = Error.new("InvalidSortExpression",400)
+  InvalidURI = Error.new("InvalidURI",400)
+  InvalidWSAddressingProperty = Error.new("InvalidWSAddressingProperty",400)
+  InvalidWSDLVersion = Error.new("InvalidWSDLVersion",400)
+  MalformedSOAPSignature = Error.new("MalformedSOAPSignature",403)
+  MissingAction = Error.new("MissingAction",400)
+  MissingParameter = Error.new("MissingParameter",400)
+  MissingWSAddressingProperty = Error.new("MissingWSAddressingProperty",400)
+  MultipleExistsConditions = Error.new("MultipleExistsConditions",400)
+  MultipleExpectedNames = Error.new("MultipleExpectedNames",400)
+  MultipleExpectedValues = Error.new("MultipleExpectedValues",400)
+  MultiValuedAttribute = Error.new("MultiValuedAttribute",409)
+  NoSuchDomain = Error.new("NoSuchDomain",400)
+  NoSuchVersion = Error.new("NoSuchVersion",400)
+  NotYetImplemented = Error.new("NotYetImplemented",401)
+  NumberDomainsExceeded = Error.new("NumberDomainsExceeded",409)
+  NumberDomainAttributesExceeded = Error.new("NumberDomainAttributesExceeded",409)
+  NumberDomainBytesExceeded = Error.new("NumberDomainBytesExceeded",409)
+  NumberItemAttributesExceeded = Error.new("NumberItemAttributesExceeded",409)
+  NumberSubmittedAttributesExceeded = Error.new("NumberSubmittedAttributesExceeded",409)
+  NumberSubmittedItemsExceeded = Error.new("NumberSubmittedItemsExceeded",409)
+  RequestExpired = Error.new("RequestExpired",400)
+  RequestTimeout = Error.new("RequestTimeout",408)
+  ServiceUnavailable = Error.new("ServiceUnavailable",503)
+  TooManyRequestedAttributes = Error.new("TooManyRequestedAttributes",400)
+  UnsupportedHttpVerb = Error.new("UnsupportedHttpVerb",400)
+  UnsupportedNextToken = Error.new("UnsupportedNextToken",400)
+  URITooLong = Error.new("URITooLong",400)
+
+  #Standard AWS errors
+  SignatureDoesNotMatch = Error.new("SignatureDoesNotMatch",400)
+  InvalidClientTokenId = Error.new("InvalidClientTokenId",400)
+  InvalidRequest = Error.new("InvalidRequest",400)
 end
