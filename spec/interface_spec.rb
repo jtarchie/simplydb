@@ -129,23 +129,21 @@ describe SimplyDB::Interface do
         to_return(:status => 200, :body => '<SelectResponse><SelectResult><Item><Name>Item_03</Name><Attribute><Name>Category</Name><Value>Clothes</Value></Attribute><Attribute><Name>Subcategory</Name><Value>Pants</Value></Attribute><Attribute><Name>Name</Name><Value>Sweatpants</Value></Attribute><Attribute><Name>Color</Name><Value>Blue</Value></Attribute><Attribute><Name>Color</Name><Value>Yellow</Value></Attribute><Attribute><Name>Color</Name><Value>Pink</Value></Attribute><Attribute><Name>Size</Name><Value>Large</Value></Attribute></Item><Item><Name>Item_06</Name><Attribute><Name>Category</Name><Value>Motorcycle Parts</Value></Attribute><Attribute><Name>Subcategory</Name><Value>Bodywork</Value></Attribute><Attribute><Name>Name</Name><Value>Fender Eliminator</Value></Attribute><Attribute><Name>Color</Name><Value>Blue</Value></Attribute><Attribute><Name>Make</Name><Value>Yamaha</Value></Attribute><Attribute><Name>Model</Name><Value>R1</Value></Attribute></Item></SelectResult><ResponseMetadata><RequestId>b1e8f1f7-42e9-494c-ad09-2674e557526d</RequestId><BoxUsage>0.0000219907</BoxUsage></ResponseMetadata></SelectResponse>')
         @interface.select("select Color from MyDomain where Color like 'Blue%'").should == [
               {
-                'Item_03' => {
                   'Category' => 'Clothes',
                   'Subcategory' => 'Pants',
                   'Name' => 'Sweatpants',
                   'Color' => ['Blue','Yellow','Pink'],
-                  'Size' => 'Large'
-                }
+                  'Size' => 'Large',
+                  'Item' => 'Item_03'
               },
               {
-                'Item_06' => {
                   'Category' => 'Motorcycle Parts',
                   'Subcategory' => 'Bodywork',
                   'Name' => 'Fender Eliminator',
                   'Color' => 'Blue',
                   'Make' => 'Yamaha',
-                  'Model' => 'R1'
-                }
+                  'Model' => 'R1',
+                  'Item' => 'Item_06'
               }
             ]
       end

@@ -172,10 +172,10 @@ describe SimplyDB::Server do
 
       it "returns a hash of item id to attributes" do
         JSON.parse(last_response.body).should == [
-          {"testID"=>{"zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}},
-          {"updateID"=>{"zip"=>"12345", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"28", "state"=>"CA", "city"=>"San Francisco"}},
-          {"delete_partialID"=>{"zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}},
-          {"delete_allID"=>{"zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}}
+          {"Item"=>"testID", "zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"},
+          {"Item"=>"updateID", "zip"=>"12345", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"28", "state"=>"CA", "city"=>"San Francisco"},
+          {"Item"=>"delete_partialID", "zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"},
+          {"Item"=>"delete_allID", "zip"=>"90210", "address"=>"123 Main St", "name"=>"John Smith", "age"=>"27", "state"=>"CA", "city"=>"San Francisco"}
         ]
       end
     end

@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'simplydb/error'
 
 module SimplyDB
   class Interface
@@ -112,7 +113,7 @@ module SimplyDB
       call(params) do |doc|
         doc.css("SelectResponse SelectResult Item").collect do |element|
           item_name = element.css("Name").first.text
-          item = element.css("Attribute").inject({}) do |attributes, attribute|
+          item = element.css("Attribute").inject({'Item' => item_name}) do |attributes, attribute|
             attribute_name = attribute.css("Name").first.text
             attribute_value = attribute.css("Value").first.text
             if attributes.has_key?(attribute_name)
@@ -123,7 +124,6 @@ module SimplyDB
             end
             attributes
           end
-          {item_name => item}
         end
       end
     end
@@ -176,7 +176,8 @@ module SimplyDB
               @next_token = doc.css("NextToken").first.text unless doc.css("NextToken").empty?
               block.call(doc)
             end
-          rescue SimplyDB::Error::ServiceUnavailable, RestClient::ServiceUnavailable => e
+          # rescue SimplyDB::Error::ServiceUnavailable, RestClient::ServiceUnavailable => e
+          rescue SimplyDB::Error::ServiceUnavailable => e
             if attempts > 0
               call(params, attempts - 1, &block)
             else
