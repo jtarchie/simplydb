@@ -1,0 +1,52 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://sdb.amazonaws.com:443/
+    body: Action=Select&Signature=ZbsCSrWKvhKKYedCXt7arNjasqOHsWJ7T3gPdeeyQ%2Fo%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&SelectExpression=SELECT%20*%20FROM%20rspec1%20WHERE%20zip%20%3D%20%2290210%22%20LIMIT%202&ConsistentRead=false
+    headers: 
+      accept: 
+      - "*/*; q=0.5, application/xml"
+      content-type: 
+      - application/x-www-form-urlencoded
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "326"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      server: 
+      - Amazon SimpleDB
+      date: 
+      - Wed, 20 Apr 2011 03:46:09 GMT
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAO1VW3eiOhR+91e4+m4JQezhLIZZoRUt09IREdC33BTk4oWg
+      4K8/aZ22Y9c8+DgPJw9Zyc7+vp3sL9kxvzdF3j3wfZVuym836i24+W51zCnP
+      ORU+r7absuJd6VNW324SIbb/KkrFyC0u8GlT4mN1SzeFwjZUgQAYPdDvqbpy
+      Y30S1LmwzEfBC8v0cMEtwSvx+GAqbxMTCbFPSS34r9VTun1fCnFec8sAUAWm
+      cp6Yym/+X6GYsT2vqku4CrXuM07L7lRcR7LilwTw7ipcKbtLoLtJZNQiFclV
+      BJXA4gvDPboKSVPRXgKnuOw6e1zStKKbP3IoZ0F+k6XeMrmB/4X5O4TxeCOC
+      TcZLa/8CkB17LbpnawJBPY/UhBdG/VR6GW11n0Vhy0O7JdDLqeYdaKp7RHPz
+      cGTsF9HdHtP4qXz0vN3xGXXuQYacUV7j2N/Oo+aBQH3HIn3Nhnm9GIX9aIVe
+      cOxN5hHLJ4WhksJPaJn/QKip5rEH/EgHEqtPZz7uILStaOk4pHBSMgqz6QT9
+      pHGYS4AkVo/S1n9zXqHglz1gY3dLCvaAR+Eaa55KZhm6L8O6gyOjnkZ6togT
+      jJCqUhiejzY77yxAyJtDo6YwP7FRWLNhEwTlBA2zZjePF8kTbBJS0MNM81tJ
+      ppcv4IiGRZNQzbfZ2G9x5KoSGMljq4t4iJYrZEtSl0KjZUOjlUFahtAhGHkH
+      MjUSEjkDAvuHDoX+6Ul1JMjVZ2P3MIfh6RX0bnMdmfTS/0kLP6dr0afoa3v8
+      GMmcoZ0NvfV56hzpWJfKqtcqe7ZN/UAqDDqB5sp8fbIjW47HSYuQfs5J8ZaT
+      Wqqmksmn23CFEB/bAKHcngHPCTLf7QQZ68vL+nHvTOWygr9/Bc9cYFkp8Ktl
+      V7/WcmbdEbU/+AfCHsS039MHkPTYYGn0lipYavqALA1DvqBPf9PeNLNKvmgL
+      3ALZNPl1aJqpfJhfnb+GUy6/JOs/mu1EjLkGAAA=
+
+    http_version: "1.1"

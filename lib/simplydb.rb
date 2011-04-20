@@ -1,3 +1,6 @@
+module SimplyDB
+end
+
 require 'simplydb/error'
 require 'simplydb/interface'
 require 'simplydb/client'

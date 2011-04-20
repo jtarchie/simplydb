@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=DeleteAttributes&Signature=73N0%2BRCYbWF8pdt9gBFLjW%2FtQV4B9BSIt8QjK9%2FL6ts%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&Attribute.0.Value=27&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&Attribute.1.Value=90210&SignatureMethod=HmacSHA256&Attribute.1.Name=zip&Attribute.0.Name=age&DomainName=activity&ItemName=delete_partialID
+    body: Action=DeleteAttributes&Signature=txh%2B0jilk6b5P8DrPwKXweKe%2FgXpViOiJbLGUoWZxOM%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&Attribute.0.Value=27&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Attribute.1.Value=90210&SignatureMethod=HmacSHA256&Attribute.1.Name=zip&Attribute.0.Name=age&DomainName=rspec1&ItemName=delete_partialID
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -12,7 +12,7 @@
       accept-encoding: 
       - gzip, deflate
       content-length: 
-      - "362"
+      - "358"
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -21,7 +21,7 @@
       content-type: 
       - text/xml
       date: 
-      - Wed, 13 Apr 2011 03:03:25 GMT
+      - Wed, 20 Apr 2011 03:46:32 GMT
       server: 
       - Amazon SimpleDB
       content-encoding: 
@@ -31,18 +31,18 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAHWPzQrCMBCE7z5F6T3NJm2VSowoXjx4EXyApFl/wDbqbrX4
-      9OpBBcE5fnzDMGbaN8fkihc6xHaSqgzSqR2YBR6RccZ8OfiOkdZIp9gSJk+7
-      pUm6Zz6NpaTgM9e4e2zdjbI6NjLEWmqASkAhVClTa97VFbILjt2LnDskXgar
-      cORLHCpRhtwLAF8Lr2svChV0PsKtg1AZ+fXNPPYbcju0kMEzWlWVzo384Jf8
-      Oyf/nbEPjvjOuv0AAAA=
+      H4sIAAAAAAAAAHWPzW7CMBCE730KlLtjeyGJUhmjIi49cEHqA6ztLSCRmLLL
+      j/r0JAeKhNQ5fvpGo3GLW3eYXOjE+9zPC1uaYuHf3IoOJPQhctqHsxBviI+5
+      Z5oMds/zYidyfNeaUyixw9/c45XLmDudctRgTKvMTNlKF949qmsSTCg4kp8z
+      sXwmj9NYWxNBfc8CKQh1qwBiraBJQBYba0Ll9NN3y3z7YtySN6UZArZtYer0
+      Hx7l1zn93xl/BxqqfX/9AAAA
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=GetAttributes&Signature=5CKPRn%2FTJbzXhGDbhgCkSnP2lCkIFs782%2FplLdtzHrU%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ConsistentRead=false&ItemName=delete_partialID
+    body: Action=GetAttributes&Signature=f7U5TfPXVps0wFgguM%2F9FpaRn5pmF4SPbHjrAHVzF7A%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ConsistentRead=false&ItemName=delete_partialID
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -51,7 +51,7 @@
       accept-encoding: 
       - gzip, deflate
       content-length: 
-      - "291"
+      - "289"
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -62,7 +62,7 @@
       server: 
       - Amazon SimpleDB
       date: 
-      - Wed, 13 Apr 2011 03:03:31 GMT
+      - Wed, 20 Apr 2011 03:46:42 GMT
       content-encoding: 
       - gzip
       vary: 
@@ -70,12 +70,12 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAI2QT0/DMAzF73yKqvc2adYwhrJMAwkE0jgwwd1tPFZpTUbt
-      wuDT0w1tsD+H+RDJL+/9bNmMVvUi+sCGquCHcZbKeGQvzD3ymLmpipaRnpGW
-      wRNGndXTMJ4zL6+FIFekUMN38PBJaRlq4UIplJSDROZJpkVsjzjtgq3ZKdY8
-      QY0WnGuQyIhNZ15h0aLNVC+aQOWjKRvxKxnxL3kI8d2zT3gM8y5dVzw/C0AM
-      fEC4HZ+VLCv+2g9OwUd3DfiyojKcZIiTl9leeoIMDhjWynuLxA/Ooizyfj7Q
-      idazPFHu6jLRSpcJzGZ9WWABWnXr//nNTVi9ELyhlalc16CnlTJiJ6/Nh+OO
-      1tr82x9aZV5mJgIAAA==
+      H4sIAAAAAAAAAI2QzU7DMBCE7zxFlHtiJ2lpglxXBQkEUjlQwX1jb2mkxC7Z
+      DRSenqaIQn8O9cGSxzPfrkZN1k0dvGNLlXfjMIllONEX6g55ytxWZcdIT0gr
+      7wiDjdXROFwyr66EIFvG0MCXd/BBsfGNsN6IVMoikoMoGYpQH3G6mrXaKVo9
+      QoMarG2RSIntS71A3aFO0iyYQeWCOSvxIynxL3kIcZtrn/Dgl5t0U/HyLAAx
+      8AHhZnpW0lT8uR+cgwtuW3CmIuNPMsTJZn6bniGDBYZeeeuQ+N7qQToEW8os
+      wjK5jDI0eWRQLqIRFDkuTJZm+UiJP7+69utnglfUMpb9KbJhmiqxk3vz4bij
+      tbb/+htEoDQUJgIAAA==
 
     http_version: "1.1"

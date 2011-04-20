@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=DeleteAttributes&Signature=hhLkXazGTxZl8FKjHWjUhxa1xw17SdSpAYnVQwryppo%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ItemName=delete_allID
+    body: Action=DeleteAttributes&Signature=H7RcV9daqueqPcvn116sSyMDaejwd%2BHxZDC0gtOWd9I%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec1&ItemName=delete_allID
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -21,7 +21,7 @@
       content-type: 
       - text/xml
       date: 
-      - Wed, 13 Apr 2011 03:03:32 GMT
+      - Wed, 20 Apr 2011 03:46:54 GMT
       server: 
       - Amazon SimpleDB
       content-encoding: 
@@ -31,18 +31,18 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAHWPwWrDMBBE7/0K47ustZQmUVEUWnrpoZdAPmDtXRJDbKXe
-      TWv69Y0PbSDQOT7eMEzcTv2p+ORRujxsyrqCcpse4iufWPlZdeyai7LsWM55
-      EC6u9iCb8qh6frJWqKmwx+884JdUbe4t5dY6gGBgYepHW6b4W31nRULFmXxc
-      WPSNEjggj55MvVo0xvm1NxhoabxrWlp6WFPw0d78+JKnveCBE1RwjatDgFW0
-      f3iW7+fsf2fSDzSRc/H9AAAA
+      H4sIAAAAAAAAAHWPwQrCMBBE735F6T1N0lraSowoXjx4EfyATbNqwTba3ar4
+      9epBBcE5Pt4wjJnd2mN0wZ6a0E1jnah4ZkdmiUdknDP3jRsYaYN0Ch1h9LQ7
+      msYH5tNESvIugRbuoYMrJXVopQ+1TJWqhBoLncvYmnd1jQweGF7kPCDxylvI
+      63HpAQTqwgnIy0pkzhVCY7ErS11nqfNGfn2zCLctwR6tStQzqa4qVRj5wS/5
+      d07+O2Mfi9HIa/0AAAA=
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=GetAttributes&Signature=BR4IP8ZBtN6VutNvnmnds5wZ%2BGXky1zHNjHxirgkJ%2Bg%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ConsistentRead=false&ItemName=delete_allID
+    body: Action=GetAttributes&Signature=YZ4FedGu6IDjBSEQmVOT0Gup256sFslr6ZLv8pqTmlQ%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ConsistentRead=false&ItemName=delete_allID
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -51,7 +51,7 @@
       accept-encoding: 
       - gzip, deflate
       content-length: 
-      - "287"
+      - "283"
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -62,7 +62,7 @@
       server: 
       - Amazon SimpleDB
       date: 
-      - Wed, 13 Apr 2011 03:03:33 GMT
+      - Wed, 20 Apr 2011 03:47:04 GMT
       content-encoding: 
       - gzip
       vary: 
@@ -70,10 +70,10 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAG2PzQrCMBCE7z6F9J5uEm1pJUb0Ih68CD5Akq4/YBt1tyo+
-      vfaggjrH4eMbxkxu9aF/wTPtYzNOVCqTie2ZOfKU+bz3LSOtkI6xIew/0YbG
-      yY75OAKgyqeudvfYuCulIdZQxQBaylLIoVAZJPbH0x4YrHkJl8iucuy65tQi
-      8aKy3oUiK5QS5QCD0PkmEyoUSmDwodC+zPNcGfjwZhZva3JbtDKVXcqBltrA
-      u+7g7zn4+88+ADw0aQYNAQAA
+      H4sIAAAAAAAAAG2PzW6CQBSF930Kwn64wwABmmFMuzEuujHxAebnxpoAY7mX
+      anx6ZVFNtGd58uU7OXp1HvrkFyc6xLFL80ymK/Om18gfzNPBzYy0RTrGkTC5
+      oSN16Tfz8R2AgsvsYC9xtCfKfBwgRA9KylbIUuQVpObFM/cMRv8Jv5BtsGyX
+      5mdG4k0woXS+CQqFdz6IMi8a0arailAXvmrr2jVFpeHB68943pHdo5GZXNIW
+      SioN93qBn+fg33/mCoksRXoNAQAA
 
     http_version: "1.1"

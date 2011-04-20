@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=DomainMetadata&Signature=2lgrsvgSB1fQEamLv%2FbX6TVmIHvo5116WSGlgyche6Y%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity
+    body: Action=DomainMetadata&Signature=fgLL0BaHiIg7Bclu5tdFbl7atu2LQ34ceK6kNT58%2FOA%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec1
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -12,7 +12,7 @@
       accept-encoding: 
       - gzip, deflate
       content-length: 
-      - "243"
+      - "241"
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -23,7 +23,7 @@
       server: 
       - Amazon SimpleDB
       date: 
-      - Wed, 13 Apr 2011 03:03:18 GMT
+      - Wed, 20 Apr 2011 03:46:08 GMT
       content-encoding: 
       - gzip
       vary: 
@@ -31,12 +31,12 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAG2RS1ODMBhF9/6KDvuQB6/ipOlY3XShC1/7QIIyQwg2H1r7
-      64XWClKyy8n57s0kfL031eJT71xp65VHfeKtxRW/s0aW9b0GqSTIR+0aWzu9
-      6Nzarbx3gOYaY6cyXxp5sLX8cn5uDVY2x4yQFJEQ0Qh74jKorUDwLWhza9sa
-      RMjxsDnyB2m0eyoPevMN2omQnYwJ5jcAuzJrQfcHp/GY4xn63xxFsKk/G/8q
-      q/Y3iYWjgRGfyKMYmrDpyLjkuexKQZpG0ICwOA6SdMnxQDmef77zf5x5Tz66
-      aNgqEYRFGhOVIpXLDGVRmKCIFEukI6J0QrOCBQHHg883dv/i5JsWxCf9SmgS
-      pRz/4V6e1l3e6yiIH3OPmGBOAgAA
+      H4sIAAAAAAAAAG2RwVKDMBCG7z5FhzskoUCKk6Zj9dKDHtR6X2BVZhqCzaK1
+      Ty+01iIlt3z77b87iVrszGbyiVtX2mruiYB7C32l7qyBsrpHggIIHtHVtnI4
+      ad3Kzb13ovqaMVdkARjY2wq+XJBbwwqbs5Dz1OeRL2Lm6cugZkNarQjNrW0q
+      0pFi58uBP4BB91TucflN6HQUHo0BVjdE2zJrCLvCsT1RbIT+N3sR4dAfjX+B
+      TfObFEa9hh4fyL0YIcNhS3/Ic9kOJTC1FlM+DaUQSarYmSo2/nyn/zjxjny0
+      0bQqdIwSXrMc/FmSSD/l2czHVvIBc8FTGfE8k4qdfbW0u7WDN9Q84N2RQsbt
+      Fn+4k4fjLvc6CPoH8IGNJU4CAAA=
 
     http_version: "1.1"

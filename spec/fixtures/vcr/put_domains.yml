@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=CreateDomain&Signature=dIeUQBpWsieilErb6SsxEAxd7ni9nmsQNVbzYDZQjf4%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=information
+    body: Action=CreateDomain&Signature=bgLXroG5%2Bz2bcyWJ%2FWne6MTDs%2FY5kzVtNooDr0747IQ%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec6
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -12,7 +12,7 @@
       accept-encoding: 
       - gzip, deflate
       content-length: 
-      - "242"
+      - "243"
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -23,7 +23,7 @@
       server: 
       - Amazon SimpleDB
       date: 
-      - Wed, 13 Apr 2011 03:03:11 GMT
+      - Wed, 20 Apr 2011 03:46:02 GMT
       content-encoding: 
       - gzip
       vary: 
@@ -31,18 +31,18 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAG2PvQ6CMBRGd5/CsJdekBYxpSbq4uBi4gNc6EVJpEVbf+LT
-      K4OaGNeT8+XkU/N7dxxf6exbZ8soiSGa65FangkDrVyHrd2S7531NH6Z1pfR
-      IYR+xrk3VYwdPpzFm49r13Hjap4CFAwylggeafWebiigwYADOV3Ih7XRUmCN
-      CMSyIs8YyMwwSUXDJpA0FSQoJeSKf321cPedxz1piAGEEAWk+VTxDx7k3xz/
-      d0Q/AcW/hwj1AAAA
+      H4sIAAAAAAAAAG2PzQ4BMRRG955CZt/prcxlRqoSbCxsJB7gmnsxiWnR+omn
+      xwKJ2J6cLyefHd/affcip9gEP8pMDtnYdez0JJRkFlpq/FLiIfgo3afp4yjb
+      pXQYah15nVNL9+DpGvM6tJpDrXsAlYJCGdSZs+/pQhIxJXqR41limrMTKUpC
+      qBWXfaNqNKVCZlSGcV0IV0wbsPrr20m4rSJtxUEOgIgV9Aal1R/8kn9z+t8R
+      9wBDDeN99QAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=ListDomains&Signature=DegXo6Vb5uZea%2F5Hj3nYBhdNZY2wHche7hahJ6AaHJE%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256
+    body: Action=ListDomains&Signature=RO3Sm0999jei5HD6NYrbbiIO2K44fSba%2FDoJgcDDaz4%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -62,7 +62,7 @@
       server: 
       - Amazon SimpleDB
       date: 
-      - Wed, 13 Apr 2011 03:03:11 GMT
+      - Wed, 20 Apr 2011 03:46:03 GMT
       content-encoding: 
       - gzip
       vary: 
@@ -70,19 +70,19 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAIWRwU7DMAyG7zzF1HuatEkXirJMQlyQgAMSD+AlKURqkrJ4
-      Y/D0tELAVI3hm39/sn/ban0I/WLvttmnuCqqkhVrfaHufMabFMDH/OjykGJ2
-      ixGMeVW8IA5XlGa7KSHAR4rwlkuTArXJ0JqxljBBqoYWetZl16NWX+kDBKfB
-      oN97fFf0SDwGfOzSNgCOzv5k+mTOAzGh7/w/0DDuPy/TE+6/b3HvECwgTMrr
-      zmW8tZrbTiwZr8f1RUfM5pIREFyQpq0lcMnbpZWK/vLqOh2eMjw7zUo2haxk
-      0yr6I0/wfBw98Rj9CVA5ZG/EAQAA
+      H4sIAAAAAAAAAIWSS07DMBBA95yiyj7xp/koyHWlqhskYIHEASa2oZYSO8TT
+      Ujg9jhBQqib1zvPeeDwei/WxaxcHMwTr3SphGU3W8kbc24Bb34F14cmE3rtg
+      FlF0YZXsEPtbQoJuMujg0zt4D5nyHdFeEU5pndI8ZQVJ5Nkp+xal+N4+Qmck
+      KLQHix+CnARPhdYrwHitScF5tC/2iuRxZ4ZJ2sfOZ5KH0BvF5jGfx8t5nM/j
+      chKjCfgfkgvv/TO9B4OgAWGMvO1j6p2WtCo4pxXEaRXLlAHUKaiSp4zrsqlL
+      nZsm9vbni40/Pgd4NZJmdFwVq4pakN/wKJ+XIxe+kvwC52FUbnYCAAA=
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=DeleteDomain&Signature=gD5VnHwAvWvbWnfROL6497Jp1rNs%2BALtXLFNia9nbnw%3D&Version=2009-04-15&AWSAccessKeyId=1VRWH6Y8EA9RKV7NHSR2&SignatureVersion=2&Timestamp=2011-04-13T01%3A40%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=information
+    body: Action=DeleteDomain&Signature=bayjEdeXEr8%2BM2OKSDQ%2FPSSFuwxITdcXWw4IfRdEegk%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec6
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
@@ -91,7 +91,7 @@
       accept-encoding: 
       - gzip, deflate
       content-length: 
-      - "244"
+      - "241"
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -102,7 +102,7 @@
       server: 
       - Amazon SimpleDB
       date: 
-      - Wed, 13 Apr 2011 03:03:13 GMT
+      - Wed, 20 Apr 2011 03:46:04 GMT
       content-encoding: 
       - gzip
       vary: 
@@ -110,10 +110,10 @@
       transfer-encoding: 
       - chunked
     body: !binary |
-      H4sIAAAAAAAAAG2PvQrCMBRGd59Cuqe5jQ21EiOIi4OL4ANckxstNIma+INP
-      rw4qiOvhfBw+Nbv5fnihU+pimBZVCcVMD9SCesq0iB67sKZ0iCHR8GmGNC32
-      OR8mnCe7LdHjPQa8ptJEz200XAC0DGpWSV5o9Z6uKKPFjC9yPFPKS6tb45rG
-      GcvsVgpWmwoZ2rFgVNcwck60DlDxr6/m8bZJuCMNJYCUsgXRjBX/4Jf8m+P/
-      jugH6eOgcvUAAAA=
+      H4sIAAAAAAAAAG2PvQ6CMBRGd5+CsJfeIhUxpSaGxcHFxAe40IuSQIu2/sSn
+      Vwc1Ma4n58vJp5a3oY8udPKds2UsEoiXeqIq6ilQ5Qbs7Jb86Kyn6GlaX8aH
+      EMYF597UCQ54dxavPmncwI1reApQMMiYkDzW6j3dUECDAV/keCYf1kZTVlM2
+      yxuWSRKsMbMpE6YlVrfpFKGQAutc8a+vVu6287gnDQmAlLKANJ8r/sEv+TfH
+      /x3RD/3+6yv1AAAA
 
     http_version: "1.1"

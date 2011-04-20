@@ -168,7 +168,7 @@ module SimplyDB
           begin
             doc = Nokogiri::XML(body)
             if error = doc.css("Response Errors Error").first
-              raise SimplyDB::Error.const_get(error.css("Code").first.content), error.css("Message").first.content
+              raise SimplyDB::Errors.const_get(error.css("Code").first.content), error.css("Message").first.content
             else
               #gather some stats from the request
               @request_id = doc.css("RequestId").first.text
@@ -176,8 +176,7 @@ module SimplyDB
               @next_token = doc.css("NextToken").first.text unless doc.css("NextToken").empty?
               block.call(doc)
             end
-          # rescue SimplyDB::Error::ServiceUnavailable, RestClient::ServiceUnavailable => e
-          rescue SimplyDB::Error::ServiceUnavailable => e
+          rescue SimplyDB::Errors::ServiceUnavailable, RestClient::ServiceUnavailable => e
             if attempts > 0
               call(params, attempts - 1, &block)
             else

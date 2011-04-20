@@ -1,65 +1,71 @@
+def HTTPError(status_code)
+  klass = Class.new(SimplyDB::Error)
+  klass.send(:define_method, :http_status_code) {status_code}
+  klass
+end
+
 module SimplyDB
   class Error < RuntimeError
-    attr_accessor :http_status_code, :name
-    def initialize(name, http_status_code)
-      @name = name
-      @http_status_code = http_status_code
-    end  
+    def name
+      self.class.name
+    end
   end
-  
-  AccessFailure = Error.new("AccessFailure",403)
-  AttributeDoesNotExist = Error.new("AttributeDoesNotExist",404)
-  AuthFailure = Error.new("AuthFailure",403)
-  AuthMissingFailure = Error.new("AuthMissingFailure",403)
-  ConditionalCheckFailed = Error.new("ConditionalCheckFailed",409)
-  ExistsAndExpectedValue = Error.new("ExistsAndExpectedValue",400)
-  FeatureDeprecated = Error.new("FeatureDeprecated",400)
-  IncompleteExpectedExpression = Error.new("IncompleteExpectedExpression",400)
-  InternalError = Error.new("InternalError",500)
-  InvalidAction = Error.new("InvalidAction",400)
-  InvalidHTTPAuthHeader = Error.new("InvalidHTTPAuthHeader",400)
-  InvalidHttpRequest = Error.new("InvalidHttpRequest",400)
-  InvalidLiteral = Error.new("InvalidLiteral",400)
-  InvalidNextToken = Error.new("InvalidNextToken",400)
-  InvalidNumberPredicates = Error.new("InvalidNumberPredicates",400)
-  InvalidNumberValueTests = Error.new("InvalidNumberValueTests",400)
-  InvalidParameterCombination = Error.new("InvalidParameterCombination",400)
-  InvalidParameterValue = Error.new("InvalidParameterValue",400)
-  InvalidQueryExpression = Error.new("InvalidQueryExpression",400)
-  InvalidResponseGroups = Error.new("InvalidResponseGroups",400)
-  InvalidService = Error.new("InvalidService",400)
-  InvalidSOAPRequest = Error.new("InvalidSOAPRequest",400)
-  InvalidSortExpression = Error.new("InvalidSortExpression",400)
-  InvalidURI = Error.new("InvalidURI",400)
-  InvalidWSAddressingProperty = Error.new("InvalidWSAddressingProperty",400)
-  InvalidWSDLVersion = Error.new("InvalidWSDLVersion",400)
-  MalformedSOAPSignature = Error.new("MalformedSOAPSignature",403)
-  MissingAction = Error.new("MissingAction",400)
-  MissingParameter = Error.new("MissingParameter",400)
-  MissingWSAddressingProperty = Error.new("MissingWSAddressingProperty",400)
-  MultipleExistsConditions = Error.new("MultipleExistsConditions",400)
-  MultipleExpectedNames = Error.new("MultipleExpectedNames",400)
-  MultipleExpectedValues = Error.new("MultipleExpectedValues",400)
-  MultiValuedAttribute = Error.new("MultiValuedAttribute",409)
-  NoSuchDomain = Error.new("NoSuchDomain",400)
-  NoSuchVersion = Error.new("NoSuchVersion",400)
-  NotYetImplemented = Error.new("NotYetImplemented",401)
-  NumberDomainsExceeded = Error.new("NumberDomainsExceeded",409)
-  NumberDomainAttributesExceeded = Error.new("NumberDomainAttributesExceeded",409)
-  NumberDomainBytesExceeded = Error.new("NumberDomainBytesExceeded",409)
-  NumberItemAttributesExceeded = Error.new("NumberItemAttributesExceeded",409)
-  NumberSubmittedAttributesExceeded = Error.new("NumberSubmittedAttributesExceeded",409)
-  NumberSubmittedItemsExceeded = Error.new("NumberSubmittedItemsExceeded",409)
-  RequestExpired = Error.new("RequestExpired",400)
-  RequestTimeout = Error.new("RequestTimeout",408)
-  ServiceUnavailable = Error.new("ServiceUnavailable",503)
-  TooManyRequestedAttributes = Error.new("TooManyRequestedAttributes",400)
-  UnsupportedHttpVerb = Error.new("UnsupportedHttpVerb",400)
-  UnsupportedNextToken = Error.new("UnsupportedNextToken",400)
-  URITooLong = Error.new("URITooLong",400)
 
-  #Standard AWS errors
-  SignatureDoesNotMatch = Error.new("SignatureDoesNotMatch",400)
-  InvalidClientTokenId = Error.new("InvalidClientTokenId",400)
-  InvalidRequest = Error.new("InvalidRequest",400)
+  module Errors
+    class AccessFailure < HTTPError(403); end
+    class AttributeDoesNotExist < HTTPError(404); end
+    class AuthFailure < HTTPError(403); end
+    class AuthMissingFailure < HTTPError(403); end
+    class ConditionalCheckFailed < HTTPError(409); end
+    class ExistsAndExpectedValue < HTTPError(400); end
+    class FeatureDeprecated < HTTPError(400); end
+    class IncompleteExpectedExpression < HTTPError(400); end
+    class InternalHTTPError < HTTPError(500); end
+    class InvalidAction < HTTPError(400); end
+    class InvalidHTTPAuthHeader < HTTPError(400); end
+    class InvalidHttpRequest < HTTPError(400); end
+    class InvalidLiteral < HTTPError(400); end
+    class InvalidNextToken < HTTPError(400); end
+    class InvalidNumberPredicates < HTTPError(400); end
+    class InvalidNumberValueTests < HTTPError(400); end
+    class InvalidParameterCombination < HTTPError(400); end
+    class InvalidParameterValue < HTTPError(400); end
+    class InvalidQueryExpression < HTTPError(400); end
+    class InvalidResponseGroups < HTTPError(400); end
+    class InvalidService < HTTPError(400); end
+    class InvalidSOAPRequest < HTTPError(400); end
+    class InvalidSortExpression < HTTPError(400); end
+    class InvalidURI < HTTPError(400); end
+    class InvalidWSAddressingProperty < HTTPError(400); end
+    class InvalidWSDLVersion < HTTPError(400); end
+    class MalformedSOAPSignature < HTTPError(403); end
+    class MissingAction < HTTPError(400); end
+    class MissingParameter < HTTPError(400); end
+    class MissingWSAddressingProperty < HTTPError(400); end
+    class MultipleExistsConditions < HTTPError(400); end
+    class MultipleExpectedNames < HTTPError(400); end
+    class MultipleExpectedValues < HTTPError(400); end
+    class MultiValuedAttribute < HTTPError(409); end
+    class NoSuchDomain < HTTPError(400); end
+    class NoSuchVersion < HTTPError(400); end
+    class NotYetImplemented < HTTPError(401); end
+    class NumberDomainsExceeded < HTTPError(409); end
+    class NumberDomainAttributesExceeded < HTTPError(409); end
+    class NumberDomainBytesExceeded < HTTPError(409); end
+    class NumberItemAttributesExceeded < HTTPError(409); end
+    class NumberSubmittedAttributesExceeded < HTTPError(409); end
+    class NumberSubmittedItemsExceeded < HTTPError(409); end
+    class RequestExpired < HTTPError(400); end
+    class RequestTimeout < HTTPError(408); end
+    class ServiceUnavailable < HTTPError(503); end
+    class TooManyRequestedAttributes < HTTPError(400); end
+    class UnsupportedHttpVerb < HTTPError(400); end
+    class UnsupportedNextToken < HTTPError(400); end
+    class URITooLong < HTTPError(400); end
+
+    #Standard AWS HTTPErrors
+    class SignatureDoesNotMatch < HTTPError(400); end
+    class InvalidClientTokenId < HTTPError(400); end
+    class InvalidRequest < HTTPError(400); end
+  end
 end

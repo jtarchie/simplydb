@@ -20,6 +20,10 @@ Rspec.configure do |config|
     '67890'
   end
 
+    def vcr_record_option
+      :none
+    end
+
   config.extend VCR::RSpec::Macros
 
   config.before do

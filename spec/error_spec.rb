@@ -1,12 +1,16 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 describe SimplyDB::Error do
+  before(:all) do
+    class ExampleError < HTTPError(404); end
+  end
+
   before do
-    @error = SimplyDB::Error.new("NotFound", 404)
+    @error = ExampleError.new
   end
 
   it "contains the name of the error" do
-    @error.name.should == "NotFound"
+    @error.name.should == "ExampleError"
   end
 
   it "contains a status code" do
