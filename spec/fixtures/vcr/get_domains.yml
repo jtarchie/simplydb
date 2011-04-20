@@ -3,16 +3,16 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=ListDomains&Signature=RO3Sm0999jei5HD6NYrbbiIO2K44fSba%2FDoJgcDDaz4%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256
+    body: Action=ListDomains&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=RO3Sm0999jei5HD6NYrbbiIO2K44fSba%2FDoJgcDDaz4%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "220"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -20,22 +20,22 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:46:00 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:39 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAIWSTU7DMBBG95yiyt6xnSakQa4rITZIwAKJA0xtl1pK7JCZ
-      lsLpSYSAUjWpd/7eG4//1OrQ1LO969DHsExkKpKVvlIPHukuNuADPjtsY0A3
-      68WAy2RL1N5wjnadQgOfMcA7piY23EbDMyEqJnImC57ok1V2NWn1PX2Cxmkw
-      5PeePhQ/Co+FOhqgflujQojkN/6CFGnrulHa9iefKO6wdUZO42waz6dxPorJ
-      If2H/MyF/jzPoyOwQDAkb7u+9N5qIWUhFxbYdV7lLCvmC1aCNKzKhVuXm7KA
-      DBT/89VtPLwgvDotUjGMUpZFpfhvPMin7fiZv6K/AHeJ47tXAgAA
+      H4sIAAAAAAAAAIWSy07DMBBF93xFlb1jO+8g15UQGyRggcQHTO0ptZTEIZ6W
+      wteTCgGlaoJ3vueMxy+1OrTNYo9DcL5bRjIW0UpfqXsX6Na34LrwhKH3XcDF
+      KHZhGW2J+mvOg13H0MKH7+AtxMa33HrDEyFqJjImcx7ps1V2DWn1NX2EFjUY
+      cntH74qfhKdC4w3QuK1JofPkNu4fydMWh0najyefKR5Cj0bO42Qep/M4m8SE
+      gf5CfuFCv5/nAQksEByT191Yeme1xVIKUyOTKRom17ZgpcgqluZVUkBVSSw2
+      iv/66sYfngO8oBaxOI5Slnmt+E98lM/b8Qt/RX8Cxw9o71cCAAA=
 
     http_version: "1.1"

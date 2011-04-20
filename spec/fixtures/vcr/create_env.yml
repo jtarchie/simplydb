@@ -3,16 +3,16 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=CreateDomain&Signature=EFFa3xy69ayZVth8CVM3OqYm99zKddtnwl13GgjqsRU%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec1
+    body: Action=CreateDomain&DomainName=rspec1&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=EFFa3xy69ayZVth8CVM3OqYm99zKddtnwl13GgjqsRU%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "237"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -20,38 +20,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:56 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:30 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PywrCMBBF936FdJ9m+kjbSExB3bhwI/gB02bQgk20iQ/8
-      eu1CBXF7OJfDVfW9P06vNPjO2XmUxBDVeqKWA2Ggleuxs1vyJ2c9TV+m9fPo
-      EMJpxrk3TYw9PpzFm49b13PjWp4CSAY5SwSPtHpPNxTQYMCRnC/kw9pokyci
-      g7ZiZStLlpuqYVKaghEUBVUiSzMqFP/6auHuO4970hADCCEkpGWl+AeP8m+O
-      /zuin+jeL/P1AAAA
+      H4sIAAAAAAAAAG2PvQ6CMBSFd5+CsJdekPJjak3UxcHFxAe40KuSSKu0KvHp
+      hUFNjMsZvnwnJ0cu+vYc3KlzjTXzMI4gXKiJXHWEnta2xcbsyF2scRQMpnHz
+      8OT9Zca501WELT6twYeLattybWueAJQMUhYLHir5rm7Jo0aPI7neyPmNVnGW
+      AUGVMdBFzZL6MGUEQ0CR59O0KrQglPzry6Xt9w6PpCACEEKUkOSF5B88yr9z
+      /N8R9QIxfO7y9QAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=CreateDomain&Signature=Q1%2Fr7RhqUybeC3yvCxr3fsEcE6kNGZcEFreYrlrCVjg%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec2
+    body: Action=CreateDomain&DomainName=rspec2&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=Q1%2Fr7RhqUybeC3yvCxr3fsEcE6kNGZcEFreYrlrCVjg%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "239"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -59,38 +59,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:56 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:31 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PsQrCMBRFd7+idE/zooltJI2gLg4ugh/w2j61YBM1UYtf
-      rw4qiOvhXA7XTPvukFzpHFrvylRkkE7twMzPhJEWvsPWrSkcvQuUPE0XynQf
-      43HCeWiqDDu8e4e3kNW+442v+RBAM5BMKJ5a856uKGKDEV/kdKEQl40thJAI
-      cswUqoJJLIBRDorpkRZS51VVb6XhX9/MfL8JuCMLGYBSSsMwLwz/4Jf8m+P/
-      jtgHZnFYh/UAAAA=
+      H4sIAAAAAAAAAG2PvQrCMBRGd59Cuqe5bRrTShpBXRxcBB/gNolasEk18Qef
+      XjuoIK6H83H45OzeHcdXew6td3WSpZDM1EguzhajXfoOW7exofcu2PHLdKFO
+      DjH2U0qDaVLs8OEd3kKqfUeN1zQHqAgUJOM0UfI9XduIBiMO5HSxIa6M0kw0
+      WmRAWM53hAthSFFkjHDTVCVDzUwxkfTry7m/bwPurYIUgHNeQS5KST94kH9z
+      9N8R9QTkr0tA9QAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=CreateDomain&Signature=cz3NHbJC9fouqswqdWIbOCh6HfJz4TkraVdz34vc6vE%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec3
+    body: Action=CreateDomain&DomainName=rspec3&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=cz3NHbJC9fouqswqdWIbOCh6HfJz4TkraVdz34vc6vE%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "237"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -98,38 +98,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:57 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:33 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PvQrCMBRGd5+idE9zm5rWShpBXRxcBB/gNrlowSbaxB98
-      enVQQVwP5+PwqdmtPyQXGkLnXZPmGaQzPVKLgTDS0vfYuQ2Fo3eBkqfpQpPu
-      YzxOOQ+2zbDHu3d4DZnxPbfecAFQMxizXPJUq/d0TREtRnyR05lCXFltSjSW
-      bM6qFgtmREvMIkyYNKIsZFGWwlaKf30197dtwB1pyACklDWIaqL4B7/k3xz/
-      d0Q/AEIZr571AAAA
+      H4sIAAAAAAAAAG2PzQrCMBCE7z6F9J5mW7qtSpqCevHgRfAB1marBZtUE3/w
+      6bUHFcTDXD6+YRhV3bvj+Mpn3zpbRkkMUaVHanFmCrx0HbV2w7531vP4ZVpf
+      RocQ+pmU3uxi6ujhLN18XLtOGlfLFGAqIBMJykird3XNgQwFGsjpwj6sjOYG
+      TJFgJrBJUeSTOhe1yUFku4QNZpi+ouTXV3N333ras4YYABGnkBYTJT94kH/n
+      5L8j+gnVowEs9QAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=CreateDomain&Signature=CiMKBiz3Fag%2Fxhl%2FQnlJMNFq33aSqCn5RZ033ZkxmTs%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec4
+    body: Action=CreateDomain&DomainName=rspec4&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=CiMKBiz3Fag%2Fxhl%2FQnlJMNFq33aSqCn5RZ033ZkxmTs%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "241"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -137,38 +137,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:57 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:35 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PvQrCMBRGd59Cuqe5aY1pJaagLg4ugg9wa64/YBNtohaf
-      XjuoIK6H83H4dNU1p+GN2nD0bpqIFJLKDPS8JYy08A0e3ZrC2btAw5fpwjQ5
-      xHiecB5snWKDD+/wHtKtb7j1W54BlAxGTEieGP2eriiixYg9uVwpxKU1+c7m
-      1o6RYVZYRlgrVkOumNipWoyULIQizb++nvluE3BPBlIAKWUJmSo0/+Be/s3x
-      f0fME4kWWTX1AAAA
+      H4sIAAAAAAAAAG2PywrCMBRE936FZJ/kprT1QUxB3bhwI/gB1+RWCzZRE7X4
+      9dqFCuJyDmcYRlddexze6BKb4GdMCWCVGejFhTDRMrTY+A3FU/CRhi/Txxk7
+      pHSaShndTmCLj+DxHoUNrXTBygxgwiHnqpDM6Hd1TQkdJuzJ+UoxrZxRqBTU
+      tuSogDjUYHn5yrx0jkYZ1JnNlZZfX89Dt424JwMCoCiKCWSjsZYf3Mu/c/Lf
+      EfMEyCTZW/UAAAA=
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=PutAttributes&Attribute.5.Replace=true&Signature=8XzqVfmF6OIqvpW4tYCa3Exb2tmedOYSzlgR5tzmVIc%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&Attribute.2.Value=San%20Francisco&Attribute.0.Value=123%20Main%20St&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Attribute.5.Name=zip&Attribute.3.Name=name&Attribute.1.Value=27&Attribute.0.Replace=true&SignatureMethod=HmacSHA256&Attribute.4.Name=state&Attribute.2.Name=city&Attribute.1.Name=age&Attribute.0.Name=address&DomainName=rspec1&Attribute.5.Value=90210&Attribute.3.Value=John%20Smith&Attribute.4.Value=CA&Attribute.3.Replace=true&Attribute.1.Replace=true&ItemName=testID&Attribute.4.Replace=true&Attribute.2.Replace=true
+    body: Attribute.0.Name=address&Attribute.0.Value=123%20Main%20St&Attribute.0.Replace=true&Attribute.1.Name=age&Attribute.1.Value=27&Attribute.1.Replace=true&Attribute.2.Name=city&Attribute.2.Value=San%20Francisco&Attribute.2.Replace=true&Attribute.3.Name=name&Attribute.3.Value=John%20Smith&Attribute.3.Replace=true&Attribute.4.Name=state&Attribute.4.Value=CA&Attribute.4.Replace=true&Attribute.5.Name=zip&Attribute.5.Value=90210&Attribute.5.Replace=true&DomainName=rspec1&ItemName=testID&Action=PutAttributes&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=8XzqVfmF6OIqvpW4tYCa3Exb2tmedOYSzlgR5tzmVIc%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "703"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -176,38 +176,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:58 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:37 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PzW7CMBCE732KKHfHmx8DqYwR3HqohJD6AEu8LkgkhuyG
-      Rn16kgOtVHVOo9E3Go3djO0luVPP59it0zyDdONe7H6QrUh/Pg5CfCC+xo4p
-      mdCO1+lJ5PqqNftjhi1+xw6/OGtiq31sdAFQK6hUbnTq7LP6ToIeBefkNhDL
-      m3fehLBaLFAtKRjV4OSqvKlVWMESjAkVmdLqX97u4vjB+EkOMphUFFCWtdU/
-      8Qz/ndP/PnEPK/74p/cAAAA=
+      H4sIAAAAAAAAAG2PzQrCMBCE7z5F6T3N9r+VGNGbB0EEH2CbBC3YRt2tik+v
+      PaggzvHjG4ZR83t3DK7uQq3vZ2EcQTjXE7UZeMF8aZuBHW0dnXxPLnipPc3C
+      A/NpKiXZJsIOH77HG0XGd9J6IxOAWkAm4lyGWr2ra8dokXEk58ERr6zGwiTg
+      bCnA2FjktqpEWhQoqiyvoazK2lij5NdXS3/fEe6dhgheSRJI01rJDx7l3zn5
+      94l+AvcJqpX3AAAA
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=PutAttributes&Attribute.5.Replace=true&Signature=n0KL9v1tyyfhVjPygw0lTyooIoAPyllxXgO8MrKW7Mc%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&Attribute.2.Value=San%20Francisco&Attribute.0.Value=123%20Main%20St&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Attribute.5.Name=zip&Attribute.3.Name=name&Attribute.1.Value=27&Attribute.0.Replace=true&SignatureMethod=HmacSHA256&Attribute.4.Name=state&Attribute.2.Name=city&Attribute.1.Name=age&Attribute.0.Name=address&DomainName=rspec1&Attribute.5.Value=90210&Attribute.3.Value=John%20Smith&Attribute.4.Value=CA&Attribute.3.Replace=true&Attribute.1.Replace=true&ItemName=updateID&Attribute.4.Replace=true&Attribute.2.Replace=true
+    body: Attribute.0.Name=address&Attribute.0.Value=123%20Main%20St&Attribute.0.Replace=true&Attribute.1.Name=age&Attribute.1.Value=27&Attribute.1.Replace=true&Attribute.2.Name=city&Attribute.2.Value=San%20Francisco&Attribute.2.Replace=true&Attribute.3.Name=name&Attribute.3.Value=John%20Smith&Attribute.3.Replace=true&Attribute.4.Name=state&Attribute.4.Value=CA&Attribute.4.Replace=true&Attribute.5.Name=zip&Attribute.5.Value=90210&Attribute.5.Replace=true&DomainName=rspec1&ItemName=updateID&Action=PutAttributes&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=n0KL9v1tyyfhVjPygw0lTyooIoAPyllxXgO8MrKW7Mc%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "705"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -215,38 +215,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:58 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:38 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PzQrCMBCE7z6F9J5mGy21ElP05kEQwQfIz1YF21R3q+LT
-      qwcVxOs33zCMrm7NcXjBMx1iO0uyFJLKDPS65znz+eB6RtogdbElHD7VlmbJ
-      nrmbSknBpbax99jaK6U+NjJELxVAKWAsslwmRr+rK2QbLNsXOfVIvAxGKe9C
-      jV5gOVaiKMJEKOsnInMuz2soSgDQ8uvrRbxtye7QQPqMQCkYjUotP/gl/87J
-      v0/MAyfnGoj3AAAA
+      H4sIAAAAAAAAAG2PzQrCMBCE7z6F9J5m21RrJY3ozYMggg+wNusP2Ka6WxWf
+      Xj2oIM7x4xuGsZNbfexf6MyH0JRREkM0cT277GQqcj5sOiFeEbehYeo/1YbL
+      aC/SjrVmv4mxxnto8MpxFWrtQ6VTgEJBppKBjpx9Vxck6FHwRU4dscy9I28I
+      CpMpXxCqalQZladZrvJtNkqGBmHrvdVf387Cbc24IwcxPJOmYExh9Qe/5N85
+      /feJewCQFFMq9wAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=PutAttributes&Attribute.5.Replace=true&Signature=G%2BD4vR1Ee99R5acmlHMzk0r7mnICaYosUBqNuuSQi4Y%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&Attribute.2.Value=San%20Francisco&Attribute.0.Value=123%20Main%20St&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Attribute.5.Name=zip&Attribute.3.Name=name&Attribute.1.Value=27&Attribute.0.Replace=true&SignatureMethod=HmacSHA256&Attribute.4.Name=state&Attribute.2.Name=city&Attribute.1.Name=age&Attribute.0.Name=address&DomainName=rspec1&Attribute.5.Value=90210&Attribute.3.Value=John%20Smith&Attribute.4.Value=CA&Attribute.3.Replace=true&Attribute.1.Replace=true&ItemName=delete_partialID&Attribute.4.Replace=true&Attribute.2.Replace=true
+    body: Attribute.0.Name=address&Attribute.0.Value=123%20Main%20St&Attribute.0.Replace=true&Attribute.1.Name=age&Attribute.1.Value=27&Attribute.1.Replace=true&Attribute.2.Name=city&Attribute.2.Value=San%20Francisco&Attribute.2.Replace=true&Attribute.3.Name=name&Attribute.3.Value=John%20Smith&Attribute.3.Replace=true&Attribute.4.Name=state&Attribute.4.Value=CA&Attribute.4.Replace=true&Attribute.5.Name=zip&Attribute.5.Value=90210&Attribute.5.Replace=true&DomainName=rspec1&ItemName=delete_partialID&Action=PutAttributes&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=G%2BD4vR1Ee99R5acmlHMzk0r7mnICaYosUBqNuuSQi4Y%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "715"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -254,38 +254,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:59 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:38 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PwQrCMBBE736F9J5m0xptJUb05kEQwQ/YtIsKtlF3q+LX
-      qwcVxDk+3jCMm96aQ/9CZ97HdpKYFJKp77lVJzOR8z50QrwmPsaWqf9UW54k
-      O5HjWGuuQ4oN3mOLV06r2Og6VjoDKBUMlLE68e5dXZJgjYIvcuqIZVF7QxiC
-      rYaqGA2CQiqGqkRrVVnlaAEKCMY4/fXdPN42jFvykMIzWQZ5Xjr9wS/5d07/
-      feIfd9pMzfcAAAA=
+      H4sIAAAAAAAAAG2PywrCMBBF936FdJ9mmtT4IKbozoUggh8wbeIDbFOdqYpf
+      ry5UEO/ycC6Xa4tbfexfwpkOsZkmWQpJ4Xp21fGM+XwoOw60DtTGhkL/qTY0
+      TfbM7URK8mWKNd5jg1dKq1hLHyupAMYCcpENZOLsu7oMjB4ZX+TUBeKFd8YH
+      Y0ZGiQHorUDMKwHlcCtKnXttwGSZ8lZ+fTuPtw3hLjhI4RmlQOuxlR/8kn/n
+      5N8n7gHV2RE39wAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=PutAttributes&Attribute.5.Replace=true&Signature=qLYlbzAh%2BarpBBc9ta9JbB7Cgld3I32SnmrqsdNYyPU%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&Attribute.2.Value=San%20Francisco&Attribute.0.Value=123%20Main%20St&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Attribute.5.Name=zip&Attribute.3.Name=name&Attribute.1.Value=27&Attribute.0.Replace=true&SignatureMethod=HmacSHA256&Attribute.4.Name=state&Attribute.2.Name=city&Attribute.1.Name=age&Attribute.0.Name=address&DomainName=rspec1&Attribute.5.Value=90210&Attribute.3.Value=John%20Smith&Attribute.4.Value=CA&Attribute.3.Replace=true&Attribute.1.Replace=true&ItemName=delete_allID&Attribute.4.Replace=true&Attribute.2.Replace=true
+    body: Attribute.0.Name=address&Attribute.0.Value=123%20Main%20St&Attribute.0.Replace=true&Attribute.1.Name=age&Attribute.1.Value=27&Attribute.1.Replace=true&Attribute.2.Name=city&Attribute.2.Value=San%20Francisco&Attribute.2.Replace=true&Attribute.3.Name=name&Attribute.3.Value=John%20Smith&Attribute.3.Replace=true&Attribute.4.Name=state&Attribute.4.Value=CA&Attribute.4.Replace=true&Attribute.5.Name=zip&Attribute.5.Value=90210&Attribute.5.Replace=true&DomainName=rspec1&ItemName=delete_allID&Action=PutAttributes&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=qLYlbzAh%2BarpBBc9ta9JbB7Cgld3I32SnmrqsdNYyPU%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "711"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -293,21 +293,21 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:45:59 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:39 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PzQrCMBCE7z6F9J5m29pqJUb05kEQwQfYNOsP2EbdrYpP
-      bz2oIM5x+D6GMdN7fexf6cKH0EyiJIZoantm1cpM5HJwrRCviU+hYep3aMOT
-      aC9yGmvN3sVY4yM0eOO4CrX2odIpQKlgoJJcR9a81SUJehR8NeeWWBbeZtW2
-      GBboVApZriBPULmRK1UyKDLI/TYtiYz+8mYe7hvGHVmIoUvaeVlp9Kd+wb9z
-      +u8T+wR+bbK59wAAAA==
+      H4sIAAAAAAAAAG2PQQrCMBRE955Cuk+TJrY0ElN050IQwQOkya8Ktqn+XxVP
+      ry5UEGf5eMMwprq1x/EFzniI3SzJUpFUdmTWA82Jzod6IMANYB87hPFT7XCW
+      7In6KecY6tS17h47d8XUx5aH6LkUQjMxYVnOE2ve1RWQC47ci5wGQFoGq1WT
+      F9oXDHRRMyilZDmUmmnvVWhUIbKsNPzrm0W8bdHtwIpUPCOlUEob/sEv+XeO
+      /31iHzH3Fkv3AAAA
 
     http_version: "1.1"

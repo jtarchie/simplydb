@@ -49,7 +49,7 @@ describe SimplyDB::Client do
   describe "#call" do
     it "should be able to make an HTTP POST request" do
       stub_request(:post, "https://sdb.amazonaws.com/").
-              with(:body => 'Signature=1ds5YhHNymdgKTWOC0fjQ1YZlpBC%2FEh2K%2FbwE76auGI%3D&Version=2009-04-15&AWSAccessKeyId=12345&SignatureVersion=2&Timestamp=2011-04-11T23%3A09%3A00-07%3A00&SignatureMethod=HmacSHA256&name=John').
+              with(:body => 'name=John&AWSAccessKeyId=12345&SignatureVersion=2&Timestamp=2011-04-11T23%3A09%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=1ds5YhHNymdgKTWOC0fjQ1YZlpBC%2FEh2K%2FbwE76auGI%3D').
               to_return(:status => 200, :body => "This example body.", :headers => {})
               @client.call(:post, {:name => "John"}) do |body|
                 body.should == 'This example body.'

@@ -51,15 +51,11 @@ module SimplyDB
     end
 
     get '/domains/:name/items' do |name|
-      interface.select("select * from #{name}").each do |element|
-        element.each_value{|v| v.delete("Sdb-item-identifier")}
-      end.to_json
+      interface.select("select * from #{name}").to_json
     end
 
     get '/items' do
-      interface.select(params[:q] || params[:query]).each do |element|
-        element.each_value{|v| v.delete("Sdb-item-identifier")}
-      end.to_json
+      interface.select(params[:q] || params[:query]).to_json
     end
     
     error SimplyDB::Errors.constants.collect{|c| SimplyDB::Errors.const_get(c)} do

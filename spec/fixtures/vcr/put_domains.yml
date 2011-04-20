@@ -3,16 +3,16 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=CreateDomain&Signature=bgLXroG5%2Bz2bcyWJ%2FWne6MTDs%2FY5kzVtNooDr0747IQ%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec6
+    body: Action=CreateDomain&DomainName=rspec6&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=bgLXroG5%2Bz2bcyWJ%2FWne6MTDs%2FY5kzVtNooDr0747IQ%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "243"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -20,38 +20,38 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:46:02 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:41 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PzQ4BMRRG955CZt/prcxlRqoSbCxsJB7gmnsxiWnR+omn
-      xwKJ2J6cLyefHd/affcip9gEP8pMDtnYdez0JJRkFlpq/FLiIfgo3afp4yjb
-      pXQYah15nVNL9+DpGvM6tJpDrXsAlYJCGdSZs+/pQhIxJXqR41limrMTKUpC
-      qBWXfaNqNKVCZlSGcV0IV0wbsPrr20m4rSJtxUEOgIgV9Aal1R/8kn9z+t8R
-      9wBDDeN99QAAAA==
+      H4sIAAAAAAAAAG2PvQrCMBRGd5+idE9zG5vaSIygLg4ugg9wTa5asIma+INP
+      rw4qiOvhfBw+Pb51++xCp9gGP8rLAvKx6enpiTDRLHTY+iXFQ/CRsqfp4yjf
+      pXQYch7dusAO78HjNRY2dNwFywWAYlCxUvLc6Pd0QQkdJnyR45limjsDQjhF
+      IJi0SrGmHmwYSttnpa1c47AmWdeaf309CbdVxC0ZKACklArEoNH8g1/yb47/
+      O2IelJC2IPUAAAA=
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=ListDomains&Signature=RO3Sm0999jei5HD6NYrbbiIO2K44fSba%2FDoJgcDDaz4%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256
+    body: Action=ListDomains&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=RO3Sm0999jei5HD6NYrbbiIO2K44fSba%2FDoJgcDDaz4%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "220"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -59,39 +59,39 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:46:03 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:42 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAIWSS07DMBBA95yiyj7xp/koyHWlqhskYIHEASa2oZYSO8TT
-      Ujg9jhBQqib1zvPeeDwei/WxaxcHMwTr3SphGU3W8kbc24Bb34F14cmE3rtg
-      FlF0YZXsEPtbQoJuMujg0zt4D5nyHdFeEU5pndI8ZQVJ5Nkp+xal+N4+Qmck
-      KLQHix+CnARPhdYrwHitScF5tC/2iuRxZ4ZJ2sfOZ5KH0BvF5jGfx8t5nM/j
-      chKjCfgfkgvv/TO9B4OgAWGMvO1j6p2WtCo4pxXEaRXLlAHUKaiSp4zrsqlL
-      nZsm9vbni40/Pgd4NZJmdFwVq4pakN/wKJ+XIxe+kvwC52FUbnYCAAA=
+      H4sIAAAAAAAAAIWS307DIBSH732KpfcU6GiXGsaSZTcm6oWJD0Dh1JG0UMvZ
+      nD69bYw6l7Vyx+/7Dod/cnNqm8UR+uiCXyc8ZclG3ch7F3EXWu18fILYBR9h
+      MYg+rpM9YndLabRVqlv9Ebx+i6kJLbXB0IyxkjBBeE4TdbHKoUElv6aPugWl
+      Dbqjw3dJz8JzoQlG47CtScEHdLX7Rwq4h36SdsPJZ4r72IHh8zibx8t5LOZx
+      MYkRIv6F9Mp9f7/eA6C2GvWYvB6G0jurWGbKpRU14VAaYvICCHBrSCbqSlSC
+      F6aykv76chtOz1G/gGIpG8eKr/JS0p94lC/b0StfSX0CeKpP3XYCAAA=
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=DeleteDomain&Signature=bayjEdeXEr8%2BM2OKSDQ%2FPSSFuwxITdcXWw4IfRdEegk%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=rspec6
+    body: Action=DeleteDomain&DomainName=rspec6&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=bayjEdeXEr8%2BM2OKSDQ%2FPSSFuwxITdcXWw4IfRdEegk%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "241"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -99,21 +99,21 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:46:04 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:44 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PvQ6CMBRGd5+CsJfeIhUxpSaGxcHFxAe40IuSQIu2/sSn
-      Vwc1Ma4n58vJp5a3oY8udPKds2UsEoiXeqIq6ilQ5Qbs7Jb86Kyn6GlaX8aH
-      EMYF597UCQ54dxavPmncwI1reApQMMiYkDzW6j3dUECDAV/keCYf1kZTVlM2
-      yxuWSRKsMbMpE6YlVrfpFKGQAutc8a+vVu6287gnDQmAlLKANJ8r/sEv+TfH
-      /x3RD/3+6yv1AAAA
+      H4sIAAAAAAAAAG2PsQ6CMBRFd7+CsJe2QIWaUhLD4uBi4gcU+lQS2qKtSvx6
+      ZVAT43pybk6uqCczRDe4+N7ZKqYJiWu5EA0MEKBxRvV2B3501kP0Mq2v4lMI
+      4wpjr9tEGfVwVt190jmDtetwSghHJEeU4ViK93QLQWkV1EzOV/Bho2UBWcn1
+      kiGATqNcA0f0kJaI07agGgqWZ63AX1+s3bT36giSJIQwxjhJi1LgD57l3xz+
+      d0Q+AbGt61H1AAAA
 
     http_version: "1.1"

@@ -3,16 +3,16 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=PutAttributes&Signature=mPOdKbXZQmQjnqfypfy%2F8%2FWL1dOq57yKyaPi52acwkw%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&Attribute.0.Value=28&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Attribute.1.Value=12345&Attribute.0.Replace=true&SignatureMethod=HmacSHA256&Attribute.1.Name=zip&Attribute.0.Name=age&DomainName=rspec1&Attribute.1.Replace=true&ItemName=updateID
+    body: Attribute.0.Name=age&Attribute.0.Value=28&Attribute.0.Replace=true&Attribute.1.Name=zip&Attribute.1.Value=12345&Attribute.1.Replace=true&DomainName=rspec1&ItemName=updateID&Action=PutAttributes&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=mPOdKbXZQmQjnqfypfy%2F8%2FWL1dOq57yKyaPi52acwkw%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "397"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -20,38 +20,38 @@
     headers: 
       content-type: 
       - text/xml
-      date: 
-      - Wed, 20 Apr 2011 03:46:11 GMT
-      server: 
-      - Amazon SimpleDB
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:50 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAG2PwQrCMBBE736F9J4mrW01ElP05kEQwQ9Ym40KtqnuVsWv
-      tx5UEOf4eMMwprzXp+EVL3QMzSxKYhWVdmDWHc+ZL8ddx0gbpDY0hMNebWgW
-      HZjbqZTkdjHU8AgN3CiuQi1dqGSqlBYqE0kuI2ve1RUyOGB4kXOHxEtn0Xso
-      JgUIn461SLDwosp9JpTLPOYuA69HRn59swj3LcEerYpVnzTROu2ND37Jv3Py
-      7xP7BIKY7gz3AAAA
+      H4sIAAAAAAAAAG2PQQrCMBRE956idJ/mp2m1kRjRnQtBBA+QmlQF22j/rxZP
+      b12oIM7y8YZh9Lyvz9HNt3gKzSwWCcRzM9KbjhZE7ansyOPW4yU06KNBbXAW
+      H4kuU87RlYmt7SM09o7JPtTchT1PARSDjImcx0a/q2tP1lmyL3LtPNLKGSch
+      9wVIpvJKMZkWglmRjVkli0kJ5SR3Rab519fL0O/QHryBBIakQqlUav7BL/l3
+      jv99Yp4A9Ppn9wAAAA==
 
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=GetAttributes&Signature=HRyJQqbb4MkTW%2B9RP8VpxzwcfcMXRdVoIayg7rMz%2FP0%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&DomainName=activity&ConsistentRead=false&ItemName=updateID
+    body: Action=GetAttributes&DomainName=activity&ItemName=updateID&ConsistentRead=false&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=HRyJQqbb4MkTW%2B9RP8VpxzwcfcMXRdVoIayg7rMz%2FP0%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "283"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -59,23 +59,23 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:46:21 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:34:01 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAI2Ry07DMBBF93xFlH1i59kGua4KEgiksqCC/dQ21FJjl8wE
-      Sr+etKiFPhbxwvJc33PH8ojxul4Gn6ZB690oTGIejuWVuDc0IWrsvCWDzwZX
-      3qEJOqvDUbggWl0zhnoeQw0b7+ALY+Vrpr1iKedVxPMoKVgoz3LaJUlxUKR4
-      gtrIjV0JtjuJV1i2RiZplheC/RaC/fOfoqB1YxDP8GAK1gUz6hfybo4D0mEv
-      znXbMfjoF13X2tKiVwAS0EnC7aQXqSx9H4MzcMFdA05ZVP5iBrs4jP1wp4ZA
-      A8FW+WgN0oOWuVJDlRVJlFe6jJJskEXlvMwjncNbkhUDnfJSsD+/uPHrF+y+
-      U/KYb1eVVWkq2EHemk/bnT1rdy9/AKdzzG2ZAgAA
+      H4sIAAAAAAAAAI2RzU7DMBCE7zxFlHviJK6bBLmuChIIpHKggvs2cYilxi7Z
+      DZQ+PWkRhf4c4oPlHc83a3nldNOsvA/donF24sdh5E/VlbzXNCNqzbIjjc8a
+      186i9nqrxYlfE62vGcNyGUIDW2fhE8PCNax0BUuiKA+iURAL5quznG5FSh4U
+      JZ+g0Wpr1pLtT/IVVp1WccJHQrKfQrJ//lMUyrLViGe4NwdjvQUNC3nTxwFJ
+      Noiz/XYMPrq679oYqgcFIAGdJNzOBpGFoa9jcAHWu2vBFgYLdzGDXRzG73Dn
+      mqAEgp3y3mmkh1LxnAuRVmmQZsssAFGNAs7HIuDpuAKhs2TME8n+/PLGbV6w
+      /04VhdFu5TxPesdB3plP2509a3+vvgG37RpJmQIAAA==
 
     http_version: "1.1"

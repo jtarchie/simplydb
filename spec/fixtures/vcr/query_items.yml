@@ -3,16 +3,16 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: https://sdb.amazonaws.com:443/
-    body: Action=Select&Signature=ZbsCSrWKvhKKYedCXt7arNjasqOHsWJ7T3gPdeeyQ%2Fo%3D&Version=2009-04-15&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&SignatureMethod=HmacSHA256&SelectExpression=SELECT%20*%20FROM%20rspec1%20WHERE%20zip%20%3D%20%2290210%22%20LIMIT%202&ConsistentRead=false
+    body: Action=Select&SelectExpression=SELECT%20*%20FROM%20rspec1%20WHERE%20zip%20%3D%20%2290210%22%20LIMIT%202&ConsistentRead=false&AWSAccessKeyId=AKIAIYFIWGG2WUH6JIQA&SignatureVersion=2&Timestamp=2011-04-20T03%3A47%3A00-07%3A00&Version=2009-04-15&SignatureMethod=HmacSHA256&Signature=ZbsCSrWKvhKKYedCXt7arNjasqOHsWJ7T3gPdeeyQ%2Fo%3D
     headers: 
       accept: 
       - "*/*; q=0.5, application/xml"
-      content-type: 
-      - application/x-www-form-urlencoded
       accept-encoding: 
       - gzip, deflate
       content-length: 
       - "326"
+      content-type: 
+      - application/x-www-form-urlencoded
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -20,33 +20,33 @@
     headers: 
       content-type: 
       - text/xml
-      server: 
-      - Amazon SimpleDB
-      date: 
-      - Wed, 20 Apr 2011 03:46:09 GMT
+      transfer-encoding: 
+      - chunked
       content-encoding: 
       - gzip
       vary: 
       - Accept-Encoding
-      transfer-encoding: 
-      - chunked
+      date: 
+      - Wed, 20 Apr 2011 05:33:50 GMT
+      server: 
+      - Amazon SimpleDB
     body: !binary |
-      H4sIAAAAAAAAAO1VW3eiOhR+91e4+m4JQezhLIZZoRUt09IREdC33BTk4oWg
-      4K8/aZ22Y9c8+DgPJw9Zyc7+vp3sL9kxvzdF3j3wfZVuym836i24+W51zCnP
-      ORU+r7absuJd6VNW324SIbb/KkrFyC0u8GlT4mN1SzeFwjZUgQAYPdDvqbpy
-      Y30S1LmwzEfBC8v0cMEtwSvx+GAqbxMTCbFPSS34r9VTun1fCnFec8sAUAWm
-      cp6Yym/+X6GYsT2vqku4CrXuM07L7lRcR7LilwTw7ipcKbtLoLtJZNQiFclV
-      BJXA4gvDPboKSVPRXgKnuOw6e1zStKKbP3IoZ0F+k6XeMrmB/4X5O4TxeCOC
-      TcZLa/8CkB17LbpnawJBPY/UhBdG/VR6GW11n0Vhy0O7JdDLqeYdaKp7RHPz
-      cGTsF9HdHtP4qXz0vN3xGXXuQYacUV7j2N/Oo+aBQH3HIn3Nhnm9GIX9aIVe
-      cOxN5hHLJ4WhksJPaJn/QKip5rEH/EgHEqtPZz7uILStaOk4pHBSMgqz6QT9
-      pHGYS4AkVo/S1n9zXqHglz1gY3dLCvaAR+Eaa55KZhm6L8O6gyOjnkZ6togT
-      jJCqUhiejzY77yxAyJtDo6YwP7FRWLNhEwTlBA2zZjePF8kTbBJS0MNM81tJ
-      ppcv4IiGRZNQzbfZ2G9x5KoSGMljq4t4iJYrZEtSl0KjZUOjlUFahtAhGHkH
-      MjUSEjkDAvuHDoX+6Ul1JMjVZ2P3MIfh6RX0bnMdmfTS/0kLP6dr0afoa3v8
-      GMmcoZ0NvfV56hzpWJfKqtcqe7ZN/UAqDDqB5sp8fbIjW47HSYuQfs5J8ZaT
-      Wqqmksmn23CFEB/bAKHcngHPCTLf7QQZ68vL+nHvTOWygr9/Bc9cYFkp8Ktl
-      V7/WcmbdEbU/+AfCHsS039MHkPTYYGn0lipYavqALA1DvqBPf9PeNLNKvmgL
-      3ALZNPl1aJqpfJhfnb+GUy6/JOs/mu1EjLkGAAA=
+      H4sIAAAAAAAAAO1VTXObMBC9+1d4cncQAuLSoXREYuzQhNQYA/ZNSIrBfNlG
+      2OBfXyVukjrTg489VAdGu9r3VtontMb3tsj7e7ar06r8diVfg6vvZs+YsZwR
+      7rF6U5U164uYsv52lXC++SpJNY2vcYGPVYkP9TWpColWRIIA6AOgDmRNujI/
+      CJqcm8Y9Z4VpuLhgJmc1v78zpFfDQJzv0rjh7PfqMd28LQU4b5ipAygDQzoZ
+      hvRH/GcopnTH6vocLkOl/4jTsj/jl5Gs2DkBHF6EK8XnHOhUichapDy5iKDm
+      mH9iuEUXIUnKu3PgDJd9e4dLktak+iuHdBLkD1maDRUb+C/MvyGMy1ruVxkr
+      zd0TQFbkduiWrmMImkUoJ6zQm4fSzUineTQMOhZYXQzdnCjunqSaGytOHoz1
+      3TIc7jCJHsp7190eHlHvFmTIHucNjrzNImzvYqhtaait6ShvluNADVfoCUfu
+      dBHSfFroclx4CSnzHwi19SJygRdqQGC12dzDPYQ2NSltOy7sNB4H2WyKfpIo
+      yAVAEMsH4VNfg1fI/+336cTZxAW9w+NgjRVXjucZui2DpodDvZmFWraMEoyQ
+      LBMYnI42P+3MR8hdQL0hMD/ScdDQUev75RSNsna7iJbJA2yTuCD7ueJ1gkwr
+      n8ABjYo2IYpn0YnX4dCRBTAUx5aX0Qg9r5AlSB0C9Y6O9E4k6ShCe3/s7uOZ
+      nsShfRNDdd8j0Ds+yLYAOdp84uwXMDi+gN58ji2KXno/SeHlZM1Vgj6P+/eZ
+      qBnaWtBdn0z7QCaaUFa+VNmTb+b5QmHQ8xVH1OuDHVliPkk6hLRTTYrXmjRC
+      NTmefoSNVgixiQUQyq05cG0/85yen1FVXNb3e2dI5y/4Wyt4ZByLlwK/eLbN
+      y1tOTTWWVUhulMFQhcrgC8DPA6Y90wEAN+AGDgkDQ82QPuINq2rntfijTXAN
+      xFBE61AUQ3p3vwR/TiedtyTzF84c4de5BgAA
 
     http_version: "1.1"
