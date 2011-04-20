@@ -173,7 +173,7 @@ module SimplyDB
               #gather some stats from the request
               @request_id = doc.css("RequestId").first.text
               @box_usage = doc.css("BoxUsage").first.text.to_f
-              @next_token = doc.css("NextToken").first.text unless doc.css("NextToken").empty?
+              @next_token = doc.css("NextToken").empty? ? "" : doc.css("NextToken").first.text
               block.call(doc)
             end
           rescue SimplyDB::Errors::ServiceUnavailable, RestClient::ServiceUnavailable => e

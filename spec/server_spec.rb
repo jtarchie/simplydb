@@ -65,6 +65,12 @@ describe SimplyDB::Server do
     it "sets the content type for JSON" do
       last_response.content_type.should == "application/json"
     end
+
+    it "should set the headers for request id, box usage, and next token" do
+      last_response.headers['AMZ-BOX-USAGE'].should_not be_nil
+      last_response.headers['AMZ-REQUEST-ID'].should_not be_nil
+      last_response.headers['AMZ-NEXT-TOKEN'].should_not be_nil
+    end
   end
 
   describe "domain operations" do

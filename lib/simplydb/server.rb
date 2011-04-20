@@ -3,30 +3,37 @@ require "json"
 
 module SimplyDB
   class Server < Sinatra::Base
-    get '/domains' do
+    before /^\/(domains|items)/ do
       content_type :json
+    end
+
+    after /^\/(domains|items)/ do
+      headers({
+          'AMZ-BOX-USAGE' => interface.box_usage.to_s,
+          'AMZ-REQUEST-ID' => interface.request_id.to_s,
+          'AMZ-NEXT-TOKEN' => interface.next_token.to_s
+      })
+    end
+
+    get '/domains' do
       interface.list_domains.sort.to_json
     end
 
     put '/domains' do
-      content_type :json
       interface.create_domain(params[:name])
       interface.list_domains.sort.to_json
     end
 
     delete '/domains' do
-      content_type :json
       interface.delete_domain(params[:name]).to_json
       interface.list_domains.sort.to_json
     end
 
     get '/domains/:name' do |name|
-      content_type :json
       interface.domain_metadata(name).to_json
     end
 
     get '/domains/:name/items/:item_id' do |name, item_id|
-      content_type :json
       attributes = interface.get_attributes(name, item_id)
       attributes.delete('Sdb-item-identifier')
       attributes.to_json
@@ -39,20 +46,17 @@ module SimplyDB
     end
 
     delete '/domains/:name/items/:item_id' do |name, item_id|
-      content_type :json
       interface.delete_attributes(name, item_id, params[:item] || {}, {})
       ""
     end
 
     get '/domains/:name/items' do |name|
-      content_type :json
       interface.select("select * from #{name}").each do |element|
         element.each_value{|v| v.delete("Sdb-item-identifier")}
       end.to_json
     end
 
     get '/items' do
-      content_type :json
       interface.select(params[:q] || params[:query]).each do |element|
         element.each_value{|v| v.delete("Sdb-item-identifier")}
       end.to_json
@@ -78,7 +82,7 @@ module SimplyDB
     private
 
     def interface
-      SimplyDB::Interface.new(
+      @interface ||= SimplyDB::Interface.new(
         :secret_key => settings.aws_secret_key,
         :access_key => settings.aws_access_key
       )
