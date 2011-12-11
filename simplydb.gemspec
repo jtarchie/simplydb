@@ -19,13 +19,14 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
   
-  s.add_dependency "sinatra"
-  s.add_dependency "nokogiri"
-  s.add_dependency "rest-client"
-  s.add_dependency "json"
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "rack-test"
-  s.add_development_dependency "webmock"
-  s.add_development_dependency "vcr"
-  s.add_development_dependency "timecop"
+  s.add_dependency "sinatra", "1.3.1"
+  s.add_dependency "nokogiri", "1.5.0"
+  s.add_dependency "rest-client", "1.6.7"
+  s.add_dependency "json", "1.6.3"
+  s.add_development_dependency "rspec", "2.7.0"
+  s.add_development_dependency "rack-test", "0.6.1"
+  s.add_development_dependency "webmock", "1.7.8"
+  s.add_development_dependency "vcr", "1.11.3"
+  s.add_development_dependency "timecop", "0.3.5"
+  s.add_development_dependency "tzinfo"
 end
