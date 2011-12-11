@@ -63,7 +63,7 @@ describe SimplyDB::Server do
     end
 
     it "sets the content type for JSON" do
-      last_response.content_type.should == "application/json"
+      last_response.content_type.should include "application/json"
     end
 
     it "should set the headers for request id, box usage, and next token" do
