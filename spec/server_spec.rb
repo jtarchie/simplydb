@@ -52,8 +52,8 @@ describe SimplyDB::Server do
 
   def interface
     SimplyDB::Interface.new(
-      :secret_key => ENV['AWS_SECRET_KEY'],
-      :access_key => ENV['AWS_ACCESS_KEY']
+      :secret_key => 'UGoGs46IrIjnNSeskdysQ9QLnWRcO8SY1Lu2xdjU',
+      :access_key => 'AKIAIYFIWGG2WUH6JIQA'
     )
   end
   
