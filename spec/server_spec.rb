@@ -44,8 +44,8 @@ describe SimplyDB::Server do
   end
 
   def app
-    SimplyDB::Server.set :aws_secret_key, ENV['AWS_SECRET_KEY']
-    SimplyDB::Server.set :aws_access_key, ENV['AWS_ACCESS_KEY']
+    SimplyDB::Server.set :aws_secret_key, 'UGoGs46IrIjnNSeskdysQ9QLnWRcO8SY1Lu2xdjU'
+    SimplyDB::Server.set :aws_access_key, 'AKIAIYFIWGG2WUH6JIQA'
     SimplyDB::Server.set :environment, :test
     SimplyDB::Server
   end
