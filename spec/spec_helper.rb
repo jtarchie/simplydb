@@ -8,7 +8,6 @@ require 'webmock/rspec'
 require 'vcr'
 require 'timecop'
 require 'simplydb'
-require 'tzinfo'
 
 Dir[File.join(File.dirname(__FILE__), "support/**/*.rb")].each {|f| require f}
 
